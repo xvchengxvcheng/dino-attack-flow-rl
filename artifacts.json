@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "distribution": "source_with_embedded_onnx",
+  "distribution": "source_with_embedded_onnx_and_release_assets",
   "models": [
     {
       "algorithm": "PPO",
@@ -27,5 +27,46 @@
       "sha256": "ce3e5243e3d1951c750eb8ab8e7b8a2ff8cb30437a61fa94c63076b6c7ffa39e"
     }
   ],
-  "release_attachments": []
+  "release_attachments": [
+    {
+      "name": "dino-attack-windows-x64-v0.1.0.zip",
+      "url": "https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/download/v0.1.0/dino-attack-windows-x64-v0.1.0.zip",
+      "bytes": 109731521,
+      "sha256": "5821e5b83b44946a1ee7edea25c7ab2fe5d4d586673e51d5e81b190d5e4df1c4",
+      "description": "Latest game Player; PPO/FPO/PolicyFlow, three maps.",
+      "file_count": 232
+    },
+    {
+      "name": "dino-training-fixedclock-v5-windows-x64.zip",
+      "url": "https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/download/v0.1.0/dino-training-fixedclock-v5-windows-x64.zip",
+      "bytes": 108219349,
+      "sha256": "6edc48583169c6d8b778abf9d0ab861591723a606ae8be46fe1afe39d9722759",
+      "description": "Frozen historical training Player; original bytes, not the new game dynamics.",
+      "file_count": 229
+    },
+    {
+      "name": "dino-deployed-checkpoints-v0.1.0.zip",
+      "url": "https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/download/v0.1.0/dino-deployed-checkpoints-v0.1.0.zip",
+      "bytes": 21254278,
+      "sha256": "fdfa4c4dbbc3bc6c72367d5499acf92bf71f883defd5965750031c2923a69692",
+      "description": "Three deployed policy checkpoints plus Flow BC best; original state/provenance preserved.",
+      "file_count": 4
+    },
+    {
+      "name": "dino-success-demonstrations-v1.zip",
+      "url": "https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/download/v0.1.0/dino-success-demonstrations-v1.zip",
+      "bytes": 4421969,
+      "sha256": "bd5c1a86967959c055cee3fd248805328fb762132e9eefe32c97b5c28df02e6c",
+      "description": "1000 successful episodes / 57459 samples; includes invalid actions, see legal-action report.",
+      "file_count": 5
+    },
+    {
+      "name": "dino-experiment-records-v0.1.0.zip",
+      "url": "https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/download/v0.1.0/dino-experiment-records-v0.1.0.zip",
+      "bytes": 16586467,
+      "sha256": "567ebdc24976d08e9d1935436afc71f70397ccce577591e439cf43399e9c6ec0",
+      "description": "Selected complete run tables/configuration, frozen evaluations and historical comparison snapshot; not a fair algorithm ranking.",
+      "file_count": 81
+    }
+  ]
 }

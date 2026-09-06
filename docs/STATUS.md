@@ -1,6 +1,6 @@
 # 公开源码状态
 
-日期：2026-09-06。本次交付源码、场景、三种已部署ONNX与截图；下载版游戏、训练Player、checkpoint、数据和完整实验记录尚未作为Release附件发布。
+日期：2026-09-06。交付源码、场景、三种已部署ONNX与截图；[v0.1.0研究演示](https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/tag/v0.1.0)另提供新Windows游戏、冻结训练Player、部署checkpoint/Flow BC、成功数据和精选实验记录。下载与校验见[安装说明](SETUP.md)。
 
 ## 已有能力
 
@@ -43,7 +43,7 @@
 
 ## 待完成
 
-严格确定性、多随机种子公平比较、Dino ReinFlow、action chunk、移动端性能和新游戏Player构建验收仍未完成。本项目未实现多人网络帧同步或游戏内LLM。
+严格确定性、多随机种子公平比较、Dino ReinFlow、action chunk、移动端性能仍未完成。新Windows构建和启动检查已通过，成品三地图三策略的完整人工游玩检查未完成（桌面交互工具无法初始化）；不能称完整发布验收或全量Unity测试通过。本项目未实现多人网络帧同步或游戏内LLM。
 
 ## 来源
 

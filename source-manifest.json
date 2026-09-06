@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "notes": "File bytes of the source publication, excluding this manifest and Git metadata.",
+  "notes": "SHA-256 of committed source bytes; excludes this manifest. Generated local Unity changes are not committed.",
   "files": [
     {
       "path": ".gitattributes",
@@ -14,13 +14,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 23343,
-      "sha256": "9c06113c2e0c8ba925bfb868d04377f38f626b4b457cbe7c6cb4f9cfb754f9fc"
+      "bytes": 23725,
+      "sha256": "2de86c865858b80ab5b9c2b9dadac21cdea468a3a3fd6675806ae79d0c0c3d6a"
     },
     {
       "path": "artifacts.json",
-      "bytes": 1251,
-      "sha256": "8592d625e6a9a8baa22892beb00fbcd7b46a150d05283bb2f711359b81a9b932"
+      "bytes": 3533,
+      "sha256": "6ed966a69f74558701c9422a6eb8efc9c753775915a8ef1dd70e0b216336d5c4"
     },
     {
       "path": "dino-attack/Assets/DefaultVolumeProfile.asset",
@@ -7149,8 +7149,8 @@
     },
     {
       "path": "dino-attack/Assets/Tests/PlayMode/DefenseBattlefieldPlayModeTests.cs",
-      "bytes": 12843,
-      "sha256": "8f842566f818c72bb097aa7a9003a8c87015f9469b1a6be1151c232ae088e560"
+      "bytes": 13035,
+      "sha256": "955abda661e4d0912397cf4658d742fabdd37ea48c7ed2690c67dbab07c159aa"
     },
     {
       "path": "dino-attack/Assets/Tests/PlayMode/DefenseBattlefieldPlayModeTests.cs.meta",
@@ -11688,24 +11688,34 @@
       "sha256": "c321bb6b6f8c459548c4d76fdca0e5dfe82819cdc0ae8df1e88a75a9e933c839"
     },
     {
+      "path": "docs/MODELS.md",
+      "bytes": 1202,
+      "sha256": "bf9ad10b122a471b945d2066490bd8b6549ee58758dba943d4d90c4e58efc838"
+    },
+    {
+      "path": "docs/RELEASE-v0.1.0.md",
+      "bytes": 2591,
+      "sha256": "79fa5d9b36403428a6ec62bdffd267e0574de4c54780d1a7cab9eb9e782909ee"
+    },
+    {
       "path": "docs/SETUP.md",
-      "bytes": 1894,
-      "sha256": "b63281f3360b4c72a6dd876e3e5ca25a17a96eb6e76c5eaf32c50cbc32b87576"
+      "bytes": 2589,
+      "sha256": "987b9e221f030a38cb5f21092ac69a706319763f72f728c5aeb4ed99df57940f"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 3825,
-      "sha256": "722f3b14f68ba483f8c39ea0f4623666cfdc3eeaf74b9cf3467d452e4cf65632"
+      "bytes": 4133,
+      "sha256": "09a2ecf445f7d74cf3416a16a55f009d51ccded6345d3f1582a301c16ebc1b34"
     },
     {
       "path": "docs/TRAINING.md",
-      "bytes": 2352,
-      "sha256": "4262dfc0a985c08dd2b83c5c78dfe9fb7e5957cde9c43047cdd47bea80ac4864"
+      "bytes": 4222,
+      "sha256": "99746e4c5138f9b1358e0f7790107a92a8588999b21ee01a8cd23e708f0eea5e"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 1647,
-      "sha256": "d2f6291f269c446dc781276ac857047ea4c40a6d9cbb56c133b2ffb87daaa206"
+      "bytes": 3647,
+      "sha256": "c01fc08a9b20168a8efd29714c9e1941cae512ae96a0263b720b7a9eabdc79b7"
     },
     {
       "path": "docs/assets/readme/ai-strategies.png",
@@ -12181,6 +12191,26 @@
       "path": "flow_rl/configs/phase8_dino_ppo_smoke.yaml",
       "bytes": 936,
       "sha256": "4368f2718a5443f297a4bbe93a9c86425b8045d91cfd398d3e0eec1d8acca36d"
+    },
+    {
+      "path": "flow_rl/configs/release_flow_bc_example.yaml",
+      "bytes": 1068,
+      "sha256": "4b344cb7584d4c38e2fbf5081d6cd0a3ce26c44c76556f1525b8317ba40ac038"
+    },
+    {
+      "path": "flow_rl/configs/release_fpo_example.yaml",
+      "bytes": 1319,
+      "sha256": "9f0ca798680d1c776ab04c714848b51730d2a01611fdb2f44a7c532a5e25ab42"
+    },
+    {
+      "path": "flow_rl/configs/release_policyflow_example.yaml",
+      "bytes": 1469,
+      "sha256": "bb37622c5cf9d1a0b2a380a346ab66f313a961564bb65507d33bf18918b67d60"
+    },
+    {
+      "path": "flow_rl/configs/release_ppo_example.yaml",
+      "bytes": 1242,
+      "sha256": "fedb8f18f805decb19735b64b31c5d87851b8b1ead92a47e736f62a65d66ff7a"
     },
     {
       "path": "flow_rl/environment.yml",
@@ -13066,6 +13096,11 @@
       "path": "flow_rl/tests/training/test_versioned_collector.py",
       "bytes": 9644,
       "sha256": "6b987606ed302d3b742fd3559823c952b099b3cd14cbb7f5ee513e753119e118"
+    },
+    {
+      "path": "scripts/download-artifacts.ps1",
+      "bytes": 3625,
+      "sha256": "dc418b15efc0ff8c6146aa878672c5561c5df360eae0b75dfc7a117bb41f7fbb"
     },
     {
       "path": "scripts/setup-dependencies.ps1",

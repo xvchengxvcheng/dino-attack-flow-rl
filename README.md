@@ -8,6 +8,8 @@
 
 [Flow RL 简介](#flow-rl) · [游戏预览](#preview) · [重点工作](#engineering) · [模型与完成状态](#status) · [运行指南](#quickstart) · [源码与文档](#resources)
 
+**直接体验：** [下载 Windows 游戏及训练附件（v0.1.0）](https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/tag/v0.1.0)。解压游戏包后运行 `Builds/DinoAttack-Windows-20260906/DinoAttack.exe`，保留同目录依赖。三种 AI 已内置，无需安装 Unity 或 Python。首版为研究演示，验证范围见[发布检查](docs/VALIDATION.md)。
+
 <a id="flow-rl"></a>
 
 ## Flow RL 是什么？
