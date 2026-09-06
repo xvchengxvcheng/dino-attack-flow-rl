@@ -1,5 +1,7 @@
 # Dino Attack · Flow RL
 
+**简体中文** | [English](README.en.md)
+
 **搭建可以亲自游玩的战场，让 AI 学习何时、何地部署哪种恐龙，再把训练好的模型放回游戏。**
 
 这是一个基于 Unity 6 的反向塔防项目：玩家既可以部署恐龙突破防线，也可以布置守军，挑战 AI 的进攻。项目基于原版 Dino Attack，提供持续部署、资源循环和三张地图，并通过独立的 Python / PyTorch 训练系统，将 **PPO、FPO、PolicyFlow** 三种已训练策略接入游戏的 AI Strategy 菜单。
@@ -196,7 +198,7 @@ Flow 网络的调用次数也称为 NFE，是一次动作计算开销的一部�
 
 ## 运行指南
 
-详细步骤见[安装说明](docs/SETUP.md)与[训练说明](docs/TRAINING.md)。本仓库提供源码与部署ONNX，原始训练数据和可执行程序尚未作为附件发布。
+详细步骤见[安装说明](docs/SETUP.md)与[训练说明](docs/TRAINING.md)。本仓库提供源码与部署ONNX，游戏、冻结训练程序、checkpoint、成功数据和精选实验记录已在 [v0.1.0 Release](https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/tag/v0.1.0) 发布。
 
 ### Unity 游戏
 

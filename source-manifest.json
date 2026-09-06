@@ -13,9 +13,14 @@
       "sha256": "5960ea4d70ccfe8092e2e400f5507e99d7462bee0ff353b7a6bce87be554b40e"
     },
     {
+      "path": "README.en.md",
+      "bytes": 26680,
+      "sha256": "24f85480954896ed2a1e3ad5b3c172ab053f0bfd80e02b6092c38d5cabec37a1"
+    },
+    {
       "path": "README.md",
-      "bytes": 24759,
-      "sha256": "320150b09ddb8a8bbcbbacb784297bda67975a32a7d1b655d0e4b7b6100f43ca"
+      "bytes": 24922,
+      "sha256": "8ad27656f3983b9ab58393d55c7a24b5789f6eb9fb4fc521e93663461cc060ac"
     },
     {
       "path": "artifacts.json",
