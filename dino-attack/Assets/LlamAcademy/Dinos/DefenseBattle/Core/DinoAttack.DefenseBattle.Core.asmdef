@@ -1,0 +1,8 @@
+{
+  "name": "DinoAttack.DefenseBattle.Core",
+  "rootNamespace": "LlamAcademy.Dinos.DefenseBattle",
+  "references": [
+    "DinoAttack.Session.Core"
+  ],
+  "autoReferenced": true
+}

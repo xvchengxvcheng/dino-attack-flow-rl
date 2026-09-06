@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28",
+  "license": "CC0-1.0",
+  "policy": {
+    "model_format": "FBX only",
+    "global_scale": 1,
+    "raw_model_colliders": "none",
+    "raw_model_static_flags": "none",
+    "navmesh": "decorative by default; explicit prefab/scene wrapper required to affect navigation",
+    "material_mapping": "use package colormap; create project URP material wrappers instead of editing source FBX",
+    "animation_import": "disabled/not applicable",
+    "duplicate_formats": "GLB, OBJ and MTL intentionally excluded",
+    "inactive_legacy_note": "MiniForest/Models/tree.fbx is retained only for the inactive superseded Stage8 hierarchy and is not an active Task 7 dependency"
+  },
+  "packages": [
+    {
+      "name": "Mini Forest",
+      "version": "1.0",
+      "source_root": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0",
+      "license_asset": "Assets/ThirdParty/Kenney/MiniForest/License.txt",
+      "texture_asset": "Assets/ThirdParty/Kenney/MiniForest/Textures/colormap.png"
+    },
+    {
+      "name": "Tower Defense Kit",
+      "version": "2.1",
+      "source_root": "C:\\Users\\hp\\Documents\\New project 2\\kenney_tower-defense-kit",
+      "license_asset": "Assets/ThirdParty/Kenney/TowerDefenseKit/License.txt",
+      "texture_asset": "Assets/ThirdParty/Kenney/TowerDefenseKit/Textures/colormap.png"
+    }
+  ],
+  "assets": [
+    {
+      "pkg": "Mini Forest",
+      "version": "1.0",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0\\Models\\FBX format\\patch-dirt.fbx",
+      "asset": "Assets/ThirdParty/Kenney/MiniForest/Models/patch-dirt.fbx",
+      "sha256": "e7244404e5862bacd4172881245acdca5843c1f0ade60043c9774c4c17280cc3",
+      "bytes": 27312
+    },
+    {
+      "pkg": "Mini Forest",
+      "version": "1.0",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0\\Models\\FBX format\\patch-grass.fbx",
+      "asset": "Assets/ThirdParty/Kenney/MiniForest/Models/patch-grass.fbx",
+      "sha256": "b220d928d720c698d2cdeac148efe31660beeda66d71929d53d76f17ed6bf277",
+      "bytes": 42608
+    },
+    {
+      "pkg": "Mini Forest",
+      "version": "1.0",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0\\Models\\FBX format\\rocks-low.fbx",
+      "asset": "Assets/ThirdParty/Kenney/MiniForest/Models/rocks-low.fbx",
+      "sha256": "3cd7b4569a8b39a9c8fe8d7b63c3f5db0d6acb2f02201ed4a8138eec737c6307",
+      "bytes": 30848
+    },
+    {
+      "pkg": "Mini Forest",
+      "version": "1.0",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0\\Models\\FBX format\\rocks-ramp.fbx",
+      "asset": "Assets/ThirdParty/Kenney/MiniForest/Models/rocks-ramp.fbx",
+      "sha256": "50c7fdf23def3e3b0bf368b8206a954f241658fb9db083aaeb3ba438c37a8af0",
+      "bytes": 31952
+    },
+    {
+      "pkg": "Mini Forest",
+      "version": "1.0",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_mini-forest_1.0\\Models\\FBX format\\stones.fbx",
+      "asset": "Assets/ThirdParty/Kenney/MiniForest/Models/stones.fbx",
+      "sha256": "0c178d3f8bf8c8964f1c94bbb02c5bcbece4187fc2e018b237e87b87343b7cbd",
+      "bytes": 34064
+    },
+    {
+      "pkg": "Tower Defense Kit",
+      "version": "2.1",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_tower-defense-kit\\Models\\FBX format\\detail-dirt.fbx",
+      "asset": "Assets/ThirdParty/Kenney/TowerDefenseKit/Models/detail-dirt.fbx",
+      "sha256": "7239dbeecadc70190a92cf9526cf4de546feda9a6ebab716916fd8ca0d8916a7",
+      "bytes": 32048
+    },
+    {
+      "pkg": "Tower Defense Kit",
+      "version": "2.1",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_tower-defense-kit\\Models\\FBX format\\detail-rocks.fbx",
+      "asset": "Assets/ThirdParty/Kenney/TowerDefenseKit/Models/detail-rocks.fbx",
+      "sha256": "29cdf113de33808904ec18d35896c04124f23ffa7551de12207f2747a3357e83",
+      "bytes": 30656
+    },
+    {
+      "pkg": "Tower Defense Kit",
+      "version": "2.1",
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_tower-defense-kit\\Models\\FBX format\\selection-b.fbx",
+      "asset": "Assets/ThirdParty/Kenney/TowerDefenseKit/Models/selection-b.fbx",
+      "sha256": "4b0a97e3ba3d1cb45fc53a53b89d7d8eccbb874e91a91d576ae29fda13814e4d",
+      "bytes": 27520
+    }
+  ]
+}

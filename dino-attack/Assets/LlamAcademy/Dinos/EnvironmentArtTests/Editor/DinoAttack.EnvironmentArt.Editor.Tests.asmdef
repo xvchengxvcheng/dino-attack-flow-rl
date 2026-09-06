@@ -1,0 +1,12 @@
+{
+  "name": "DinoAttack.EnvironmentArt.Editor.Tests",
+  "rootNamespace": "LlamAcademy.Dinos.EnvironmentArt.Tests.Editor",
+  "references": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": false
+}

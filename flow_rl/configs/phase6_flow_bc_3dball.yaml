@@ -1,0 +1,19 @@
+dataset_directory: ../../datasets/phase3/ppo-seed-0-dataset-seed-10000-100k
+dataset_sha256: ccee664e76aea92d83ba3440f470919520486119ca435253d583a2c73843e9e0
+metadata_sha256: 24260302217801d182ffbd6ecd80a52b26d4226a21581cbfd3c033126fce97e6
+build_path: ../../Builds/3DBall/3DBall.exe
+run_directory: ../../reports/phase6/flow-bc-seed-0
+epochs: 200
+batch_size: 1024
+learning_rate: 0.001
+weight_decay: 1.0e-6
+validation_fraction: 0.1
+state_size: 128
+time_embedding_size: 32
+velocity_hidden_sizes: [128, 128]
+nfe: 4
+checkpoint_interval_epochs: 25
+device: cuda
+seed: 600
+split_seed: 601
+resume_checkpoint: null

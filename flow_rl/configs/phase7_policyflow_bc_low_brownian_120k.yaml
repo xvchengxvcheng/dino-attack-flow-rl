@@ -1,0 +1,33 @@
+normalizer_checkpoint_path: ../../reports/phase3/ppo-seed-0/checkpoints/final.pt
+actor_initialization_checkpoint_path: ../../reports/phase6/flow-bc-seed-0/checkpoints/final.pt
+build_path: ../../Builds/3DBall/3DBall.exe
+run_directory: ../../reports/phase7/policyflow-bc-low-brownian-120k
+total_environment_steps: 120000
+rollout_size: 12000
+batch_size: 3000
+epochs: 5
+gamma: 0.99
+gae_lambda: 0.95
+actor_learning_rate: 0.0002
+critic_learning_rate: 0.0002
+clip_range: 0.2
+gaussian_entropy_coefficient: 0.001
+brownian_coefficient: 0.001
+value_clip: 0.2
+max_gradient_norm: 1.0
+state_size: 128
+time_embedding_size: 32
+velocity_hidden_sizes: [128, 128]
+critic_hidden_sizes: [128, 128]
+solver_steps: 2
+horizon_steps: 1
+checkpoint_interval: 120000
+time_scale: 20.0
+device: cuda
+worker_id: 181
+evaluation_worker_id: 191
+seed: 0
+timeout_wait: 60
+max_agent_absence_steps: 10
+behavior_name: null
+resume_checkpoint: null

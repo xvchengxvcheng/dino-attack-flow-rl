@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2755739ee35d744b12caad07d5dfb7, type: 3}
+  m_Name: PolicyFlowModel
+  m_EditorClassIdentifier: Assembly-CSharp::LlamAcademy.Dinos.Inference.DinoInferenceModelConfig
+  ModelAsset: {fileID: 5022602860645237092, guid: 22a6454478916954bbc8cacafb32f71e,
+    type: 3}
+  ModelId: policyflow-seed0-step2147452
+  ModelSha256: ce3e5243e3d1951c750eb8ab8e7b8a2ff8cb30437a61fa94c63076b6c7ffa39e
+  ProtocolVersion: dino_attack_structured_set_v2
+  ArtifactKind: trained_checkpoint
+  InputNames:
+  - global
+  - regions
+  - walls
+  - guards
+  - houses
+  - dinos
+  OutputName: actions
+  DefaultInferenceSeed: 20260905

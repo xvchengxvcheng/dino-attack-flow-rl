@@ -1,0 +1,18 @@
+{
+  "name": "DinoAttack.Map.PlayMode.Tests",
+  "references": [
+    "DinoAttack.Map.Core",
+    "DinoAttack.Map.Runtime",
+    "DinoAttack.Deployment.Core",
+    "DinoAttack.Inference.Core",
+    "DinoAttack.Session.Core",
+    "DinoAttack.Training.Core",
+    "DinoAttack.DefenseBattle.Core",
+    "Unity.InputSystem",
+    "Unity.InputSystem.TestFramework"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

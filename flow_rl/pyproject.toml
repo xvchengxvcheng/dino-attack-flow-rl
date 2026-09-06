@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools==83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow-rl"
+version = "0.1.0"
+description = "Shared external Unity ML-Agents training infrastructure for Flow RL research."
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "mlagents-envs==1.1.0",
+  "numpy==1.23.5",
+  "PyYAML==6.0.3",
+  "tensorboard==2.20.0",
+  "torch==2.2.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+
+[project.scripts]
+flow-rl-diagnose = "flow_rl.cli.diagnose:main"
+flow-rl-random-policy = "flow_rl.cli.random_policy:main"
+flow-rl-train-ppo = "flow_rl.cli.train_ppo:main"
+flow-rl-evaluate-ppo = "flow_rl.cli.evaluate_ppo:main"
+flow-rl-collect-ppo-dataset = "flow_rl.cli.collect_ppo_dataset:main"
+flow-rl-collect-dino-ppo-demonstrations = "flow_rl.cli.collect_dino_ppo_demonstrations:main"
+flow-rl-benchmark-flow = "flow_rl.cli.benchmark_flow:main"
+flow-rl-train-fpo = "flow_rl.cli.train_fpo:main"
+flow-rl-evaluate-fpo = "flow_rl.cli.evaluate_fpo:main"
+flow-rl-ablate-fpo-nfe = "flow_rl.cli.ablate_fpo_nfe:main"
+flow-rl-train-dino-parallel-fpo = "flow_rl.cli.train_dino_parallel_fpo:main"
+flow-rl-train-flow-bc = "flow_rl.cli.train_flow_bc:main"
+flow-rl-evaluate-flow-bc = "flow_rl.cli.evaluate_flow_bc:main"
+flow-rl-train-reinflow = "flow_rl.cli.train_reinflow:main"
+flow-rl-evaluate-reinflow = "flow_rl.cli.evaluate_reinflow:main"
+flow-rl-train-policyflow = "flow_rl.cli.train_policyflow:main"
+flow-rl-evaluate-policyflow = "flow_rl.cli.evaluate_policyflow:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: launches an external Unity executable"]

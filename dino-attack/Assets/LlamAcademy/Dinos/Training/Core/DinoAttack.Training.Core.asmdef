@@ -1,0 +1,5 @@
+{
+  "name": "DinoAttack.Training.Core",
+  "rootNamespace": "LlamAcademy.Dinos.Training",
+  "autoReferenced": true
+}

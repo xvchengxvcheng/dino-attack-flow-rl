@@ -1,0 +1,5 @@
+{
+  "name": "DinoAttack.Map.Core",
+  "rootNamespace": "LlamAcademy.Dinos.Map",
+  "autoReferenced": true
+}

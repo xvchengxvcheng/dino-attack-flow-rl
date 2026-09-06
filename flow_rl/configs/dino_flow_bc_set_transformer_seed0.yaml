@@ -1,0 +1,27 @@
+dataset_directory: ../../reports/phase8/policyflow-training/ppo-teacher-success-dataset-seed20260905-500x2-16env-20260905-a3/dataset
+dataset_sha256: f7d8666ed976365598e86b5a32da208b5bca34619cedd93e89234ddcb3b43034
+metadata_sha256: f5270f1f57833cb9bfbf3b58389a9b856ad3a5869a53de9b450283979a974ff1
+build_path: ../../reports/phase8/ppo-baseline/build-fixed-clock-v5-20260903/DinoAttackDualMapPPOV2-FixedClockV5-20260903.exe
+run_directory: ../../reports/phase8/policyflow-training/flow-bc-set-transformer-seed0-20260905-a2
+epochs: 50
+batch_size: 1024
+learning_rate: 0.0003
+weight_decay: 0.000001
+validation_fraction: 0.1
+state_size: 128
+time_embedding_size: 32
+velocity_hidden_sizes: [128, 128]
+nfe: 4
+checkpoint_interval_epochs: 10
+device: cuda
+seed: 0
+split_seed: 20260905
+resume_checkpoint: null
+encoder_type: set_transformer
+protocol_path: dino_attack_structured_set_v2.yaml
+encoder_d_model: 48
+encoder_heads: 4
+encoder_inducing_points: 8
+encoder_layers: 1
+encoder_dropout: 0.0
+encoder_output_size: 128

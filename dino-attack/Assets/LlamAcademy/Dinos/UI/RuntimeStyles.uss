@@ -1,0 +1,340 @@
+:root {
+    font-size: 38px;
+    --light: #F4E8D0;
+    --light-hover: #ffffff;
+    --dark: #211C19;
+    --dark--hover: #171310;
+    --green: #5E9A62;
+    --green-hover: #00cc00;
+    --red: #B54B3E;
+    --red-hover: #ff0000;
+    --accent: #D6A85F;
+    --panel: rgba(28, 23, 20, 0.78);
+    --feedback: rgba(22, 33, 31, 0.80);
+    --padding-sm: 4px;
+    --padding-md: 8px;
+    --padding-lg: 16px;
+    --padding-xl: 32px;
+    -unity-font-definition: url("/Assets/LlamAcademy/Dinos/Vendor/Fonts/Labrada-VariableFont_wght.ttf");
+}
+
+.in {
+    scale: 1;
+    transition: scale 0.25s ease-out-elastic;
+}
+.out {
+    scale: 0.8;
+    transition: scale 0.125s ease-out;
+}
+
+#bottom-bar {
+    height: 124px;
+    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Grunge Bar-Final.png");
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-background-image-tint-color: var(--dark);
+}
+
+#top-bar {
+    height: 88px;
+    justify-content: flex-end;
+}
+
+#deployment-feedback {
+    position: absolute;
+    top: 110px;
+    right: 24px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: var(--feedback);
+    color: var(--light);
+    font-size: 23px;
+}
+
+#deployment-feedback.deployment-error {
+    color: #ffb0a8;
+}
+
+#terrain-feedback {
+    position: absolute;
+    top: 158px;
+    right: 24px;
+    min-width: 310px;
+    padding: 7px 14px;
+    border-radius: 12px;
+    background-color: var(--feedback);
+    color: #bdebd9;
+    font-size: 21px;
+    -unity-text-align: middle-right;
+}
+
+#status-panel {
+    position: absolute;
+    top: 118px;
+    left: 24px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: var(--panel);
+    color: var(--light);
+    font-size: 22px;
+    min-width: 280px;
+}
+
+#status-panel Label {
+    margin-bottom: 3px;
+}
+
+#threat-status {
+    color: #ffd27a;
+}
+
+#resources-container {
+    padding-left: var(--padding-lg);
+    padding-right: var(--padding-md);
+    font-size: 40px;
+    height: 100%;
+    width: 340px;
+    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Resources Container Background.png");
+    -unity-background-image-tint-color: var(--dark);
+    color: var(--light);
+}
+
+
+#dino-button-container {
+    scale: 1;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 700px;
+    margin-left: var(--padding-lg);
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+#start-button {
+    position: absolute;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    color: var(--light);
+    -unity-font-style: bold;
+    font-size: 42px;
+    padding-bottom: 16px;
+
+    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/button.png");
+    width: 280px;
+    height: 76px;
+    scale: 1;
+    transition: -unity-background-image-tint-color 0.125s ease-out, scale 0.25s ease-in-out;
+}
+
+#start-button:enabled:active {
+    scale: 0.8;
+    transition: -unity-background-image-tint-color 0.125s ease-out, scale 0.25s ease-in-out;
+}
+
+#center-content {
+    flex-grow: 1;
+}
+
+#wave-text {
+    margin-left: var(--padding-xl);
+    padding-left: var(--padding-xl);
+    font-size: 54px;
+    height: 124px;
+    -unity-text-align: middle-left;
+    color: var(--light);
+}
+
+.underline {
+    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Underline.png");
+    width: 100%;
+    height: 100%;
+}
+
+#wave-text .underline {
+    width: 150px;
+    height: 100px;
+    margin-top: 80px;
+    margin-left: 45px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-grow {
+    flex-grow: 1
+}
+
+.text-center {
+    -unity-text-align: middle-center;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#win-lose-text {
+    -unity-font-style: bold;
+    color: var(--light);
+    text-shadow: 5px 5px 15px black;
+    font-size: 82px;
+}
+
+#win-lose-text.visible {
+    opacity: 1;
+    scale: 1;
+    translate: 0 -25px;
+    transition: opacity 0.125s ease-in-sine, scale 0.33s ease-in, translate 0.125s ease-in-sine;
+}
+#win-lose-text.hidden {
+    opacity: 0;
+    scale: 0.25;
+    translate: 0 25px;
+    transition: opacity 0.25s ease-in-sine, scale 0.25s ease-in-sine, translate 0.25s ease-in-sine;
+}
+
+#result-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 44px;
+    background-color: rgba(18, 14, 12, 0.93);
+}
+
+#session-summary {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    color: var(--light);
+    font-size: 25px;
+}
+
+.result-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 540px;
+}
+
+.result-actions Button {
+    width: 250px;
+    height: 64px;
+    margin: 5px;
+    font-size: 29px;
+    color: var(--light);
+    background-color: rgba(33, 28, 25, 0.88);
+    border-color: var(--accent);
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.ai-strategy-reason {
+    max-width: 520px;
+    margin-top: 8px;
+    color: #ffd27a;
+    font-size: 19px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.comparison-panel {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background-color: rgba(8, 7, 6, 0.72);
+}
+
+.comparison-status,
+.comparison-result {
+    color: var(--light);
+    text-shadow: 2px 2px 5px black;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.comparison-status {
+    margin-bottom: 8px;
+    font-size: 23px;
+}
+
+.comparison-result {
+    width: 250px;
+    font-size: 22px;
+}
+
+#forfeit-button {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 230px;
+    height: 54px;
+    color: #fff5e6;
+    background-color: rgba(125, 35, 28, 0.94);
+    border-color: #efb067;
+    border-width: 2px;
+    border-radius: 9px;
+    font-size: 23px;
+    -unity-font-style: bold;
+}
+
+.strategy-panel {
+    flex-direction: column;
+    align-items: center;
+    width: 540px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: rgba(8, 7, 6, 0.78);
+}
+
+.strategy-title {
+    margin-bottom: 12px;
+    color: var(--light);
+    font-size: 30px;
+    -unity-font-style: bold;
+}
+
+.strategy-options {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.strategy-options Button,
+#close-strategy-button {
+    width: 155px;
+    height: 58px;
+    margin: 5px;
+    color: var(--light);
+    background-color: rgba(33, 28, 25, 0.92);
+    border-color: var(--accent);
+    border-width: 2px;
+    border-radius: 9px;
+    font-size: 24px;
+}
+
+.strategy-options Button:disabled {
+    color: rgba(244, 232, 208, 0.48);
+    border-color: rgba(214, 168, 95, 0.42);
+}
+

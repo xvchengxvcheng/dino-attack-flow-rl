@@ -1,0 +1,931 @@
+{
+  "artifact_kind": "trained_checkpoint",
+  "inputs": [
+    {
+      "dtype": "float32",
+      "name": "global",
+      "runtime_shape": [
+        "batch",
+        5
+      ],
+      "shape": [
+        5
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "regions",
+      "runtime_shape": [
+        "batch",
+        5,
+        8
+      ],
+      "shape": [
+        5,
+        8
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "walls",
+      "runtime_shape": [
+        "batch",
+        6,
+        5
+      ],
+      "shape": [
+        6,
+        5
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "guards",
+      "runtime_shape": [
+        "batch",
+        11,
+        7
+      ],
+      "shape": [
+        11,
+        7
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "houses",
+      "runtime_shape": [
+        "batch",
+        8,
+        6
+      ],
+      "shape": [
+        8,
+        6
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dinos",
+      "runtime_shape": [
+        "batch",
+        10,
+        7
+      ],
+      "shape": [
+        10,
+        7
+      ]
+    }
+  ],
+  "model": {
+    "deterministic_action": "zero_latent_midpoint_zero_delta",
+    "file": "PolicyFlowStep2147452.onnx",
+    "nfe": 4,
+    "onnx_opset": 17,
+    "sha256": "ce3e5243e3d1951c750eb8ab8e7b8a2ff8cb30437a61fa94c63076b6c7ffa39e"
+  },
+  "output": {
+    "dtype": "float32",
+    "name": "actions",
+    "range": [
+      -1.0,
+      1.0
+    ],
+    "shape": [
+      "batch",
+      4
+    ]
+  },
+  "protocol": {
+    "manifest_sha256": "d322c4de79659d3cf90a32018715c3224e0f5b23d18628d33dc46622c8836cd7",
+    "metadata": {
+      "action": {
+        "boundary_rule": "equality_enters_higher_bin",
+        "choice_order": [
+          "Wait",
+          "Velociraptor",
+          "Pachycephalosaurus",
+          "T-Rex"
+        ],
+        "choice_thresholds": [
+          -0.5,
+          0.0,
+          0.5
+        ],
+        "dimensions": [
+          "zone",
+          "u",
+          "v",
+          "choice"
+        ],
+        "dtype": "float32",
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "size": 4,
+        "version": "dino_attack_structured_set_action_v1",
+        "wait_ignores": [
+          "zone",
+          "u",
+          "v"
+        ],
+        "zone_order": [
+          "Z1RuinsForecourt",
+          "Z2OpenMeadow",
+          "Z3RiverTerrace",
+          "Z4PalmGrove",
+          "Z5RockyShelf"
+        ],
+        "zone_thresholds": [
+          -0.6000000238418579,
+          -0.20000000298023224,
+          0.20000000298023224,
+          0.6000000238418579
+        ]
+      },
+      "manifest_sha256": "d322c4de79659d3cf90a32018715c3224e0f5b23d18628d33dc46622c8836cd7",
+      "maxima": {
+        "dinos": 10,
+        "guards": 11,
+        "houses": 8,
+        "walls": 6
+      },
+      "normalization": {
+        "food_scale": 5000.0,
+        "house_health_scale": 325.0,
+        "map_bounds": {
+          "x": [
+            -55.5,
+            48.5
+          ],
+          "z": [
+            -53.0,
+            29.0
+          ]
+        }
+      },
+      "observation_fields": [
+        [
+          "remaining_time",
+          "food_normalized",
+          "last_action_valid",
+          "dino_target_x_norm",
+          "dino_target_z_norm"
+        ],
+        [
+          "Ax",
+          "Az",
+          "Bx",
+          "Bz",
+          "Cx",
+          "Cz",
+          "Dx",
+          "Dz"
+        ],
+        [
+          "valid_mask",
+          "active",
+          "x_norm",
+          "z_norm",
+          "health_ratio"
+        ],
+        [
+          "valid_mask",
+          "type_archer",
+          "type_mage",
+          "x_norm",
+          "z_norm",
+          "health_ratio",
+          "is_wall_guard"
+        ],
+        [
+          "valid_mask",
+          "alive",
+          "x_norm",
+          "z_norm",
+          "health_ratio",
+          "max_health_normalized"
+        ],
+        [
+          "valid_mask",
+          "type_velociraptor",
+          "type_pachy",
+          "type_trex",
+          "x_norm",
+          "z_norm",
+          "health_ratio"
+        ]
+      ],
+      "observation_shapes": [
+        [
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          10,
+          7
+        ]
+      ],
+      "observation_streams": [
+        {
+          "fields": [
+            "remaining_time",
+            "food_normalized",
+            "last_action_valid",
+            "dino_target_x_norm",
+            "dino_target_z_norm"
+          ],
+          "name": "Global",
+          "shape": [
+            5
+          ]
+        },
+        {
+          "fields": [
+            "Ax",
+            "Az",
+            "Bx",
+            "Bz",
+            "Cx",
+            "Cz",
+            "Dx",
+            "Dz"
+          ],
+          "name": "Regions",
+          "shape": [
+            5,
+            8
+          ]
+        },
+        {
+          "fields": [
+            "valid_mask",
+            "active",
+            "x_norm",
+            "z_norm",
+            "health_ratio"
+          ],
+          "name": "Walls",
+          "shape": [
+            6,
+            5
+          ]
+        },
+        {
+          "fields": [
+            "valid_mask",
+            "type_archer",
+            "type_mage",
+            "x_norm",
+            "z_norm",
+            "health_ratio",
+            "is_wall_guard"
+          ],
+          "name": "Guards",
+          "shape": [
+            11,
+            7
+          ]
+        },
+        {
+          "fields": [
+            "valid_mask",
+            "alive",
+            "x_norm",
+            "z_norm",
+            "health_ratio",
+            "max_health_normalized"
+          ],
+          "name": "Houses",
+          "shape": [
+            8,
+            6
+          ]
+        },
+        {
+          "fields": [
+            "valid_mask",
+            "type_velociraptor",
+            "type_pachy",
+            "type_trex",
+            "x_norm",
+            "z_norm",
+            "health_ratio"
+          ],
+          "name": "Dinos",
+          "shape": [
+            10,
+            7
+          ]
+        }
+      ],
+      "protocol_version": "dino_attack_structured_set_v2",
+      "region_order": [
+        "Z1RuinsForecourt",
+        "Z2OpenMeadow",
+        "Z3RiverTerrace",
+        "Z4PalmGrove",
+        "Z5RockyShelf"
+      ]
+    },
+    "version": "dino_attack_structured_set_v2"
+  },
+  "provenance": {
+    "checkpoint": {
+      "file": "C:\\Users\\hp\\Documents\\New project 2\\game_project\\reports\\phase8\\policyflow-training\\resume-step836064-seed0-20260905-a1\\checkpoints\\step-2147452.pt",
+      "metadata": {
+        "action_size": 4,
+        "algorithm": "policyflow",
+        "build_sha256": "4b93b6a66c6a7895aa1390f230fcc2b2c1d0a572f9ce232f10adbc5e0e8addf0",
+        "encoder": {
+          "d_model": 48,
+          "defense_block": "isab",
+          "dinosaur_block": "sab",
+          "dropout": 0.0,
+          "encoder_type": "set_transformer",
+          "heads": 4,
+          "inducing_points": 8,
+          "layers": 1,
+          "observation_shapes": [
+            [
+              5
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              11,
+              7
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              10,
+              7
+            ]
+          ],
+          "output_fusion_hidden_size": 256,
+          "output_size": 128,
+          "protocol": {
+            "action": {
+              "boundary_rule": "equality_enters_higher_bin",
+              "choice_order": [
+                "Wait",
+                "Velociraptor",
+                "Pachycephalosaurus",
+                "T-Rex"
+              ],
+              "choice_thresholds": [
+                -0.5,
+                0.0,
+                0.5
+              ],
+              "dimensions": [
+                "zone",
+                "u",
+                "v",
+                "choice"
+              ],
+              "dtype": "float32",
+              "range": [
+                -1.0,
+                1.0
+              ],
+              "size": 4,
+              "version": "dino_attack_structured_set_action_v1",
+              "wait_ignores": [
+                "zone",
+                "u",
+                "v"
+              ],
+              "zone_order": [
+                "Z1RuinsForecourt",
+                "Z2OpenMeadow",
+                "Z3RiverTerrace",
+                "Z4PalmGrove",
+                "Z5RockyShelf"
+              ],
+              "zone_thresholds": [
+                -0.6000000238418579,
+                -0.20000000298023224,
+                0.20000000298023224,
+                0.6000000238418579
+              ]
+            },
+            "manifest_sha256": "d322c4de79659d3cf90a32018715c3224e0f5b23d18628d33dc46622c8836cd7",
+            "maxima": {
+              "dinos": 10,
+              "guards": 11,
+              "houses": 8,
+              "walls": 6
+            },
+            "normalization": {
+              "food_scale": 5000.0,
+              "house_health_scale": 325.0,
+              "map_bounds": {
+                "x": [
+                  -55.5,
+                  48.5
+                ],
+                "z": [
+                  -53.0,
+                  29.0
+                ]
+              }
+            },
+            "observation_fields": [
+              [
+                "remaining_time",
+                "food_normalized",
+                "last_action_valid",
+                "dino_target_x_norm",
+                "dino_target_z_norm"
+              ],
+              [
+                "Ax",
+                "Az",
+                "Bx",
+                "Bz",
+                "Cx",
+                "Cz",
+                "Dx",
+                "Dz"
+              ],
+              [
+                "valid_mask",
+                "active",
+                "x_norm",
+                "z_norm",
+                "health_ratio"
+              ],
+              [
+                "valid_mask",
+                "type_archer",
+                "type_mage",
+                "x_norm",
+                "z_norm",
+                "health_ratio",
+                "is_wall_guard"
+              ],
+              [
+                "valid_mask",
+                "alive",
+                "x_norm",
+                "z_norm",
+                "health_ratio",
+                "max_health_normalized"
+              ],
+              [
+                "valid_mask",
+                "type_velociraptor",
+                "type_pachy",
+                "type_trex",
+                "x_norm",
+                "z_norm",
+                "health_ratio"
+              ]
+            ],
+            "observation_shapes": [
+              [
+                5
+              ],
+              [
+                5,
+                8
+              ],
+              [
+                6,
+                5
+              ],
+              [
+                11,
+                7
+              ],
+              [
+                8,
+                6
+              ],
+              [
+                10,
+                7
+              ]
+            ],
+            "observation_streams": [
+              {
+                "fields": [
+                  "remaining_time",
+                  "food_normalized",
+                  "last_action_valid",
+                  "dino_target_x_norm",
+                  "dino_target_z_norm"
+                ],
+                "name": "Global",
+                "shape": [
+                  5
+                ]
+              },
+              {
+                "fields": [
+                  "Ax",
+                  "Az",
+                  "Bx",
+                  "Bz",
+                  "Cx",
+                  "Cz",
+                  "Dx",
+                  "Dz"
+                ],
+                "name": "Regions",
+                "shape": [
+                  5,
+                  8
+                ]
+              },
+              {
+                "fields": [
+                  "valid_mask",
+                  "active",
+                  "x_norm",
+                  "z_norm",
+                  "health_ratio"
+                ],
+                "name": "Walls",
+                "shape": [
+                  6,
+                  5
+                ]
+              },
+              {
+                "fields": [
+                  "valid_mask",
+                  "type_archer",
+                  "type_mage",
+                  "x_norm",
+                  "z_norm",
+                  "health_ratio",
+                  "is_wall_guard"
+                ],
+                "name": "Guards",
+                "shape": [
+                  11,
+                  7
+                ]
+              },
+              {
+                "fields": [
+                  "valid_mask",
+                  "alive",
+                  "x_norm",
+                  "z_norm",
+                  "health_ratio",
+                  "max_health_normalized"
+                ],
+                "name": "Houses",
+                "shape": [
+                  8,
+                  6
+                ]
+              },
+              {
+                "fields": [
+                  "valid_mask",
+                  "type_velociraptor",
+                  "type_pachy",
+                  "type_trex",
+                  "x_norm",
+                  "z_norm",
+                  "health_ratio"
+                ],
+                "name": "Dinos",
+                "shape": [
+                  10,
+                  7
+                ]
+              }
+            ],
+            "protocol_version": "dino_attack_structured_set_v2",
+            "region_order": [
+              "Z1RuinsForecourt",
+              "Z2OpenMeadow",
+              "Z3RiverTerrace",
+              "Z4PalmGrove",
+              "Z5RockyShelf"
+            ]
+          },
+          "region_fusion": "concat_query_defense_dinosaur",
+          "region_query_mode": "dynamic_geometry_only"
+        },
+        "environment_steps": 2147452,
+        "observation_shapes": [
+          [
+            5
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            10,
+            7
+          ]
+        ],
+        "optimizer_updates": 131,
+        "policy_version": 131,
+        "policyflow_source_commit": "7f304b96e93b2804bdcc943710db885adddd06b8",
+        "protocol": {
+          "action": {
+            "boundary_rule": "equality_enters_higher_bin",
+            "choice_order": [
+              "Wait",
+              "Velociraptor",
+              "Pachycephalosaurus",
+              "T-Rex"
+            ],
+            "choice_thresholds": [
+              -0.5,
+              0.0,
+              0.5
+            ],
+            "dimensions": [
+              "zone",
+              "u",
+              "v",
+              "choice"
+            ],
+            "dtype": "float32",
+            "range": [
+              -1.0,
+              1.0
+            ],
+            "size": 4,
+            "version": "dino_attack_structured_set_action_v1",
+            "wait_ignores": [
+              "zone",
+              "u",
+              "v"
+            ],
+            "zone_order": [
+              "Z1RuinsForecourt",
+              "Z2OpenMeadow",
+              "Z3RiverTerrace",
+              "Z4PalmGrove",
+              "Z5RockyShelf"
+            ],
+            "zone_thresholds": [
+              -0.6000000238418579,
+              -0.20000000298023224,
+              0.20000000298023224,
+              0.6000000238418579
+            ]
+          },
+          "manifest_sha256": "d322c4de79659d3cf90a32018715c3224e0f5b23d18628d33dc46622c8836cd7",
+          "maxima": {
+            "dinos": 10,
+            "guards": 11,
+            "houses": 8,
+            "walls": 6
+          },
+          "normalization": {
+            "food_scale": 5000.0,
+            "house_health_scale": 325.0,
+            "map_bounds": {
+              "x": [
+                -55.5,
+                48.5
+              ],
+              "z": [
+                -53.0,
+                29.0
+              ]
+            }
+          },
+          "observation_fields": [
+            [
+              "remaining_time",
+              "food_normalized",
+              "last_action_valid",
+              "dino_target_x_norm",
+              "dino_target_z_norm"
+            ],
+            [
+              "Ax",
+              "Az",
+              "Bx",
+              "Bz",
+              "Cx",
+              "Cz",
+              "Dx",
+              "Dz"
+            ],
+            [
+              "valid_mask",
+              "active",
+              "x_norm",
+              "z_norm",
+              "health_ratio"
+            ],
+            [
+              "valid_mask",
+              "type_archer",
+              "type_mage",
+              "x_norm",
+              "z_norm",
+              "health_ratio",
+              "is_wall_guard"
+            ],
+            [
+              "valid_mask",
+              "alive",
+              "x_norm",
+              "z_norm",
+              "health_ratio",
+              "max_health_normalized"
+            ],
+            [
+              "valid_mask",
+              "type_velociraptor",
+              "type_pachy",
+              "type_trex",
+              "x_norm",
+              "z_norm",
+              "health_ratio"
+            ]
+          ],
+          "observation_shapes": [
+            [
+              5
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              11,
+              7
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              10,
+              7
+            ]
+          ],
+          "observation_streams": [
+            {
+              "fields": [
+                "remaining_time",
+                "food_normalized",
+                "last_action_valid",
+                "dino_target_x_norm",
+                "dino_target_z_norm"
+              ],
+              "name": "Global",
+              "shape": [
+                5
+              ]
+            },
+            {
+              "fields": [
+                "Ax",
+                "Az",
+                "Bx",
+                "Bz",
+                "Cx",
+                "Cz",
+                "Dx",
+                "Dz"
+              ],
+              "name": "Regions",
+              "shape": [
+                5,
+                8
+              ]
+            },
+            {
+              "fields": [
+                "valid_mask",
+                "active",
+                "x_norm",
+                "z_norm",
+                "health_ratio"
+              ],
+              "name": "Walls",
+              "shape": [
+                6,
+                5
+              ]
+            },
+            {
+              "fields": [
+                "valid_mask",
+                "type_archer",
+                "type_mage",
+                "x_norm",
+                "z_norm",
+                "health_ratio",
+                "is_wall_guard"
+              ],
+              "name": "Guards",
+              "shape": [
+                11,
+                7
+              ]
+            },
+            {
+              "fields": [
+                "valid_mask",
+                "alive",
+                "x_norm",
+                "z_norm",
+                "health_ratio",
+                "max_health_normalized"
+              ],
+              "name": "Houses",
+              "shape": [
+                8,
+                6
+              ]
+            },
+            {
+              "fields": [
+                "valid_mask",
+                "type_velociraptor",
+                "type_pachy",
+                "type_trex",
+                "x_norm",
+                "z_norm",
+                "health_ratio"
+              ],
+              "name": "Dinos",
+              "shape": [
+                10,
+                7
+              ]
+            }
+          ],
+          "protocol_version": "dino_attack_structured_set_v2",
+          "region_order": [
+            "Z1RuinsForecourt",
+            "Z2OpenMeadow",
+            "Z3RiverTerrace",
+            "Z4PalmGrove",
+            "Z5RockyShelf"
+          ]
+        },
+        "schema_version": 3,
+        "seed": 0,
+        "solver": {
+          "action_transform": "tanh",
+          "direction": "0_to_1",
+          "method": "midpoint",
+          "nfe": 4
+        }
+      },
+      "sha256": "01c1def884cd26f38391ad911b3b620f5e56e0cbdd8c339e4665bfd73795ffb8"
+    },
+    "seed": null
+  },
+  "schema_version": 1
+}

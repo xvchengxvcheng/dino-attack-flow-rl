@@ -1,0 +1,17 @@
+name: flow-rl
+channels:
+  - defaults
+dependencies:
+  - python=3.10.12
+  - pip=26.1.2
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - mlagents-envs==1.1.0
+      - numpy==1.23.5
+      - protobuf==3.20.3
+      - grpcio==1.48.2
+      - PyYAML==6.0.3
+      - tensorboard==2.20.0
+      - torch==2.2.1+cu121
+      - pytest==8.3.5
+

@@ -1,0 +1,20 @@
+{
+  "name": "DinoAttack.Training.Core.Tests",
+  "references": [
+    "DinoAttack.Training.Core",
+    "DinoAttack.Deployment.Core",
+    "DinoAttack.Map.Core",
+    "DinoAttack.Map.Runtime",
+    "DinoAttack.Map.Editor",
+    "DinoAttack.Inference.Core",
+    "DinoAttack.Session.Core",
+    "DinoAttack.DefenseBattle.Core"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": false
+}

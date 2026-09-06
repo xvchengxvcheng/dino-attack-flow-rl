@@ -1,0 +1,229 @@
+{
+  "entries": [
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\dirt_1k.blend\\textures\\dirt_diff_1k.jpg",
+      "sourceSha256": "6CE6CA7E28ED046F7F93FA60DCB29F8CF42CD5A539ADC5676675ACCCFA34EFD3",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Dirt/dirt_diff_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/dirt",
+      "license": "CC0-1.0",
+      "role": "diffuse",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\dirt_1k.blend\\textures\\dirt_nor_gl_1k.exr",
+      "sourceSha256": "99417D12A135BCFE2F55B427E1F6D344D697FBA039517CA9A246E589538CD5A7",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Dirt/dirt_nor_gl_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/dirt",
+      "license": "CC0-1.0",
+      "role": "normal",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\dirt_1k.blend\\textures\\dirt_rough_1k.exr",
+      "sourceSha256": "70553C97D17AB33E3AB60D28887EBEAFAE282C798632051F830EB107FED393B3",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Dirt/dirt_rough_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/dirt",
+      "license": "CC0-1.0",
+      "role": "roughness",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\sand_03_1k.blend\\textures\\sand_03_diff_1k.jpg",
+      "sourceSha256": "E72144F9D7B81BDB7BBDB34222B53431738DCEF79346DD89412D2ABD541E4D30",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Sand03/sand_03_diff_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/sand_03",
+      "license": "CC0-1.0",
+      "role": "diffuse",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\sand_03_1k.blend\\textures\\sand_03_nor_gl_1k.exr",
+      "sourceSha256": "0C626210023806F83B2DB15ECD20C58AC1F26B3DCF82CFDC6A1CCEE0D1B10B90",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Sand03/sand_03_nor_gl_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/sand_03",
+      "license": "CC0-1.0",
+      "role": "normal",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\sand_03_1k.blend\\textures\\sand_03_rough_1k.exr",
+      "sourceSha256": "5BBB3EABB0557FE5D682C1FC5B435B47756D47E601258EE0FBA589D13C4CCC4A",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/Sand03/sand_03_rough_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/sand_03",
+      "license": "CC0-1.0",
+      "role": "roughness",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\brown_mud_03_1k.blend\\textures\\brown_mud_03_diff_1k.jpg",
+      "sourceSha256": "6DA4FBD6FC5D21044DCBDBD96E098FB464ED544B42C982E72CE8CCD1D53686C5",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/BrownMud03/brown_mud_03_diff_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/brown_mud_03",
+      "license": "CC0-1.0",
+      "role": "diffuse",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\brown_mud_03_1k.blend\\textures\\brown_mud_03_nor_gl_1k.exr",
+      "sourceSha256": "ABC909FC472448972046682BF02DA06D30125D2CA5299B2FCEA1DDCDE04BD7E0",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/BrownMud03/brown_mud_03_nor_gl_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/brown_mud_03",
+      "license": "CC0-1.0",
+      "role": "normal",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\brown_mud_03_1k.blend\\textures\\brown_mud_03_spec_1k.png",
+      "sourceSha256": "E569CF5420DCF6593500749D7735C7A65ED25E58C54F9AAEC225A2353C923979",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/BrownMud03/brown_mud_03_spec_1k.png",
+      "sourceUrl": "https://polyhaven.com/a/brown_mud_03",
+      "license": "CC0-1.0",
+      "role": "specular",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\forrest_ground_01_1k.blend\\textures\\forrest_ground_01_diff_1k.jpg",
+      "sourceSha256": "3DD6875CB3908E022A3C45EBBFFA5E84C670FF2691FBBB6DC9EA4BFF88523800",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/ForestGround01/forrest_ground_01_diff_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/forrest_ground_01",
+      "license": "CC0-1.0",
+      "role": "diffuse",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\forrest_ground_01_1k.blend\\textures\\forrest_ground_01_nor_gl_1k.exr",
+      "sourceSha256": "45094E02CC685C1B97CF615061685781ABDBDE133076F6B144078550CFED7F8D",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/ForestGround01/forrest_ground_01_nor_gl_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/forrest_ground_01",
+      "license": "CC0-1.0",
+      "role": "normal",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\forrest_ground_01_1k.blend\\textures\\forrest_ground_01_rough_1k.jpg",
+      "sourceSha256": "30D8B56A03D7B12DA16F58011B675662A40E58E1CDC768119A5F03968140058C",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/ForestGround01/forrest_ground_01_rough_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/forrest_ground_01",
+      "license": "CC0-1.0",
+      "role": "roughness",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\marble_rock_03_1k.blend\\textures\\marble_rock_03_diff_1k.jpg",
+      "sourceSha256": "9758AB77F6279D1EB5CDB85F37485962A2830EDFF69AD47F5BA37582FD5018FD",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/MarbleRock03/marble_rock_03_diff_1k.jpg",
+      "sourceUrl": "https://polyhaven.com/a/marble_rock_03",
+      "license": "CC0-1.0",
+      "role": "diffuse",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\marble_rock_03_1k.blend\\textures\\marble_rock_03_nor_gl_1k.exr",
+      "sourceSha256": "3F2A00B1E969EFD94AFCA50EBFD7057CD5638DB7A3201A31A5DC3388FCD5FBB8",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/MarbleRock03/marble_rock_03_nor_gl_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/marble_rock_03",
+      "license": "CC0-1.0",
+      "role": "normal",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\marble_rock_03_1k.blend\\textures\\marble_rock_03_rough_1k.exr",
+      "sourceSha256": "B4E8D9E551603AE6E02DD524BA45916ECC47D974A6E8AA73866B898D28098C51",
+      "destination": "Assets/ThirdParty/PolyHaven/EnvironmentGround/MarbleRock03/marble_rock_03_rough_1k.exr",
+      "sourceUrl": "https://polyhaven.com/a/marble_rock_03",
+      "license": "CC0-1.0",
+      "role": "roughness",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\game_project\\dino-attack\\Assets\\ThirdParty\\PolyHaven\\License.txt",
+      "sourceSha256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499",
+      "destination": "Assets/ThirdParty/PolyHaven/License.txt",
+      "sourceUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+      "license": "CC0-1.0",
+      "role": "license",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-wall.fbx",
+      "sourceSha256": "51D7571EFF95E4099124ADEFB095A18BA2FBE080BE67DD9D67E6D6DA23FEF671",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-wall.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-wall-half.fbx",
+      "sourceSha256": "FD4B08BC44CE111C55D929477133D603EC988C7CACAAFD9C491702E4AA259C05",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-wall-half.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-wall-corner.fbx",
+      "sourceSha256": "A1B21241886AE2EC2218CB5689FC5A684C2C06E67531F0F3EC13CDBF8CAB5B06",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-wall-corner.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-wall-top.fbx",
+      "sourceSha256": "5974EF5C9ABA80F170461544A6D22FFF72DEA10B799AE4EFE95B3D0507DE8D09",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-wall-top.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-wall-detail-a.fbx",
+      "sourceSha256": "81BF7A65A421A9B3D9282E756DA14004102B1786CBA8519DCB6CC38108B20B7F",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-wall-detail-a.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\template-corner.fbx",
+      "sourceSha256": "D64E72A5A99470DA116BEABCC01E74294A082A07426D6304861CA89409AA8119",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/template-corner.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\gate-rock.fbx",
+      "sourceSha256": "8FA32C95C9C10F87B6B359A10E868A4DB4D4E31C4D8CCDDDA0B7628040D7DF7B",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Models/gate-rock.fbx",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "rim-model",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\Models\\FBX format\\Textures\\colormap.png",
+      "sourceSha256": "4A19ED0E790C888E0C8097BEF5178F9316A5CBC93B17FCA66C1A4660A85078B9",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/Textures/colormap.png",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "colormap",
+      "active": true
+    },
+    {
+      "source": "C:\\Users\\hp\\Documents\\New project 2\\kenney_modular-cave-kit_1.0\\License.txt",
+      "sourceSha256": "0889F6CF5C972B42DE634C2F1F8BEC37D92E8D65ACF28830AFB159C04E3C6954",
+      "destination": "Assets/ThirdParty/Kenney/ModularCaveKit/License.txt",
+      "sourceUrl": "https://kenney.nl/assets/modular-cave-kit",
+      "license": "CC0-1.0",
+      "role": "license",
+      "active": true
+    }
+  ]
+}

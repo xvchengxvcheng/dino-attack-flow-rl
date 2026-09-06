@@ -1,0 +1,14 @@
+{
+  "name": "DinoAttack.Map.Editor",
+  "rootNamespace": "LlamAcademy.Dinos.Map.Editor",
+  "references": [
+    "DinoAttack.Map.Core",
+    "DinoAttack.Map.Runtime",
+    "DinoAttack.Deployment.Core",
+    "Unity.AI.Navigation"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": false
+}

@@ -1,0 +1,9 @@
+build_path: ../Builds/3DBall/3DBall.exe
+run_directory: ../reports/phase2/random-3dball-100k-rerun-20260825
+requested_environment_steps: 100000
+worker_id: 72
+seed: 0
+time_scale: 20.0
+timeout_wait: 60
+strict_agent_set: true
+max_agent_absence_steps: 10

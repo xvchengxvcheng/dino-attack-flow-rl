@@ -1,0 +1,31 @@
+build_path: ../../Builds/3DBall/3DBall.exe
+run_directory: ../../reports/phase5/fpo-seed-1-resume-300k-v2
+total_environment_steps: 500000
+rollout_size: 12000
+batch_size: 64
+epochs: 3
+gamma: 0.99
+gae_lambda: 0.99
+learning_rate: 0.0003
+final_learning_rate: 1.0e-10
+clip_range: 0.2
+final_clip_range: 0.1
+max_gradient_norm: 0.5
+state_size: 128
+time_embedding_size: 32
+velocity_hidden_sizes: [128, 128]
+critic_hidden_sizes: [128, 128]
+nfe: 4
+num_fpo_samples: 50
+difference_clip: 3.0
+positive_advantage: false
+checkpoint_interval: 100000
+time_scale: 20.0
+device: cuda
+worker_id: 101
+evaluation_worker_id: 111
+seed: 1
+timeout_wait: 60
+max_agent_absence_steps: 10
+behavior_name: null
+resume_checkpoint: ../../reports/phase5/fpo-seed-1/checkpoints/step-300000.pt

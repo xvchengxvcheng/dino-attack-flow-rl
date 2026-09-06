@@ -1,0 +1,8 @@
+{
+  "name": "DinoAttack.Inference.Core",
+  "rootNamespace": "LlamAcademy.Dinos.Inference",
+  "references": [
+    "DinoAttack.Training.Core"
+  ],
+  "autoReferenced": true
+}

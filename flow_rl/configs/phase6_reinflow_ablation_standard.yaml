@@ -1,0 +1,33 @@
+bc_checkpoint_path: ../../reports/phase6/flow-bc-seed-0/checkpoints/final.pt
+build_path: ../../Builds/3DBall/3DBall.exe
+run_directory: ../../reports/phase6/reinflow-ablation-standard-120k
+total_environment_steps: 120000
+rollout_size: 12000
+batch_size: 256
+epochs: 3
+gamma: 0.99
+gae_lambda: 0.95
+actor_learning_rate: 4.5e-5
+critic_learning_rate: 6.5e-4
+clip_range: 0.01
+entropy_coefficient: 0.03
+max_gradient_norm: 1.0
+critic_hidden_sizes: [128, 128]
+noise_hidden_sizes: [128, 128]
+nfe: 4
+horizon_steps: 1
+min_noise_std: 0.10
+max_noise_std: 0.24
+log_prob_min: -1.0
+log_prob_max: 1.0
+critic_warmup_environment_steps: 24000
+checkpoint_interval: 60000
+time_scale: 20.0
+device: cuda
+worker_id: 147
+evaluation_worker_id: 148
+seed: 700
+timeout_wait: 120
+max_agent_absence_steps: 10
+behavior_name: null
+resume_checkpoint: null

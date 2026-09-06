@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "distribution": "source_with_embedded_onnx",
+  "models": [
+    {
+      "algorithm": "PPO",
+      "path": "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale5Final4721698.onnx",
+      "configuration": "dino-attack/Assets/Resources/DinoInference/DefaultModel.asset",
+      "environment_steps": 4721698,
+      "bytes": 1268214,
+      "sha256": "30322b112c760b739d65347bae6c115d80e49c1fc0b51062554c7e223f88a954"
+    },
+    {
+      "algorithm": "FPO",
+      "path": "dino-attack/Assets/Resources/DinoInference/FPOUpdate160Step2606819.onnx",
+      "configuration": "dino-attack/Assets/Resources/DinoInference/FpoModel.asset",
+      "environment_steps": 2606819,
+      "bytes": 2114475,
+      "sha256": "faef7069fec1131b55a68fb57034a063d811f2d7e300187c45a911e6c14cf6eb"
+    },
+    {
+      "algorithm": "PolicyFlow",
+      "path": "dino-attack/Assets/Resources/DinoInference/PolicyFlowStep2147452.onnx",
+      "configuration": "dino-attack/Assets/Resources/DinoInference/PolicyFlowModel.asset",
+      "environment_steps": 2147452,
+      "bytes": 2113863,
+      "sha256": "ce3e5243e3d1951c750eb8ab8e7b8a2ff8cb30437a61fa94c63076b6c7ffa39e"
+    }
+  ],
+  "release_attachments": []
+}

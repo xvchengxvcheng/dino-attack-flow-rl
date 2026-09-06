@@ -1,0 +1,8 @@
+{
+  "name": "DinoAttack.Session.Core",
+  "rootNamespace": "LlamAcademy.Dinos.Session",
+  "references": [
+    "DinoAttack.Map.Core"
+  ],
+  "autoReferenced": true
+}

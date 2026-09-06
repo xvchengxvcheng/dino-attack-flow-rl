@@ -1,0 +1,27 @@
+build_path: ../../Builds/3DBall/3DBall.exe
+run_directory: ../../reports/phase3/ppo-seed-1
+total_environment_steps: 500000
+rollout_size: 12000
+batch_size: 64
+epochs: 3
+gamma: 0.99
+gae_lambda: 0.99
+learning_rate: 0.0003
+final_learning_rate: 1.0e-10
+clip_range: 0.2
+final_clip_range: 0.1
+entropy_coefficient: 0.001
+final_entropy_coefficient: 1.0e-5
+value_coefficient: 0.5
+max_gradient_norm: 0.5
+hidden_sizes: [128, 128]
+checkpoint_interval: 100000
+time_scale: 20.0
+device: cuda
+worker_id: 81
+evaluation_worker_id: 91
+seed: 1
+timeout_wait: 60
+max_agent_absence_steps: 10
+behavior_name: null
+resume_checkpoint: null
