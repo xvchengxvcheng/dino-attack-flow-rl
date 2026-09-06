@@ -14,18 +14,18 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 26959,
-      "sha256": "53e027fbbe00a57c81910f463915d882ca2b176f293b053e3aa670d3ca3375c2"
+      "bytes": 26953,
+      "sha256": "4ffb4c1161241de3bde2f3b6a9b8af61146e535ed54dcb060f2a72e433da3dca"
     },
     {
       "path": "README.md",
-      "bytes": 26959,
-      "sha256": "53e027fbbe00a57c81910f463915d882ca2b176f293b053e3aa670d3ca3375c2"
+      "bytes": 24926,
+      "sha256": "7204ac7f2665e89b38f7663826408507c5834ec026590b3add82ef726e4a574e"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 24923,
-      "sha256": "81291dbd6c89fdc0f678a1313f7e32e2ab33d5298f03dde6ddb346b520b71a49"
+      "bytes": 24926,
+      "sha256": "7204ac7f2665e89b38f7663826408507c5834ec026590b3add82ef726e4a574e"
     },
     {
       "path": "artifacts.json",

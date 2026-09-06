@@ -1,6 +1,6 @@
 # Dino Attack · Flow RL
 
-**简体中文** | [English](README.md)
+**简体中文** | [English](README.en.md)
 
 **搭建可以亲自游玩的战场，让 AI 学习何时、何地部署哪种恐龙，再把训练好的模型放回游戏。**
 
