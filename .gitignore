@@ -8,6 +8,8 @@
 /runs/
 /datasets/
 /artifacts/
+/.artifact-downloads/
+/artifact-manifests/
 .venv/
 .conda/
 **/__pycache__/
