@@ -1,6 +1,6 @@
 # Dino Attack · Flow RL
 
-[简体中文](README.md) | **English**
+[简体中文](README.zh-CN.md) | **English**
 
 **Build a playable battlefield, train AI to decide when, where, and which dinosaurs to deploy, then bring the trained policies back into the game.**
 
