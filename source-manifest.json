@@ -23,11 +23,6 @@
       "sha256": "7204ac7f2665e89b38f7663826408507c5834ec026590b3add82ef726e4a574e"
     },
     {
-      "path": "README.zh-CN.md",
-      "bytes": 24926,
-      "sha256": "7204ac7f2665e89b38f7663826408507c5834ec026590b3add82ef726e4a574e"
-    },
-    {
       "path": "artifacts.json",
       "bytes": 3533,
       "sha256": "6ed966a69f74558701c9422a6eb8efc9c753775915a8ef1dd70e0b216336d5c4"
