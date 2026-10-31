@@ -1316,4 +1316,5 @@ UnityEnvironment.reset()
 
 - 阶段/任务：阶段8并列仓库维护，已完成；用户反馈 GitHub README 图片显示为破损链接。根因是 README 使用已不存在的 `../picture/中文文件名.png` 路径，而公开仓库实际图片位于 `docs/assets/readme/`。
 - [x] 将 README 中 8 个图片引用改为仓库内现有的英文文件名路径，保留图片语义和版式。
-- 验证（2026-10-31）：旧 `../picture` 引用为 0；README 引用的 7 个唯一图片路径全部通过 `Test-Path` 检查。待推送后用 GitHub 页面复核渲染。
+- 验证（2026-10-31）：旧 `../picture` 引用为 0；README 引用的 7 个唯一图片路径全部通过 `Test-Path` 检查。已推送至远程 `main`，并在 GitHub 页面确认地图四和 JEV 图片正常渲染。
+
