@@ -42,11 +42,11 @@
 
 | 地图一：开阔战场 | 地图二：分层随机战场 |
 |:---:|:---:|
-| ![地图一开阔战场](../picture/地图一开阔战场.png) | ![地图二随机战场](../picture/地图二随机战场.png) |
+| ![地图一开阔战场](docs/assets/readme/open-battlefield.png) | ![地图二随机战场](docs/assets/readme/layered-battlefield.png) |
 
 | 地图三：玩家布防，AI 进攻 | 目前可用 AI 策略 |
 |:---:|:---:|
-| ![地图三玩家布防AI进攻](../picture/地图三_玩家布防AI进攻.png) | ![目前可用算法](../picture/目前可用算法.png) |
+| ![地图三玩家布防AI进攻](docs/assets/readme/defense-battlefield.png) | ![目前可用算法](docs/assets/readme/ai-strategies.png) |
 
 **单局规则**：存活恐龙抵达目标即进攻方获胜；战斗阶段最多 50 秒。部署需要足够资源、合法位置，且场上恐龙未达上限。摧毁房屋可获得额外肉量继续进攻。
 
@@ -62,7 +62,7 @@
 
 | 布防界面（含小地图） | 实战第三人称视角 |
 |:---:|:---:|
-| ![地图四星光守卫布防](../picture/地图四_星光守卫.png) | ![地图四实战场景](../picture/地图四_星光守卫_实战场景.png) |
+| ![地图四星光守卫布防](docs/assets/readme/map4-star-guard.png) | ![地图四实战场景](docs/assets/readme/map4-star-guard.png) |
 
 布防完成、选择 AI 策略后，玩家直接操控角色参与战斗：
 
@@ -82,7 +82,7 @@
 
 | JEV 交互面板（实战中） | 关系实验室 |
 |:---:|:---:|
-| ![JEV交互地图](../picture/地图四_jev交互地图.png) | ![关系设置](../picture/关系设置.png) |
+| ![JEV交互地图](docs/assets/readme/map4-jev-companion.png) | ![关系设置](docs/assets/readme/relationship-settings.png) |
 
 "溯光"是一名有独立状态的 AI 伴侣，在战斗中跟随玩家并响应自然语言指令。系统由两层数据驱动：
 
