@@ -1325,3 +1325,10 @@ UnityEnvironment.reset()
 - [x] README 已改用 `docs/assets/readme/map1-open-battlefield.png`、`map2-random-battlefield.png` 和 `map3-defense-ai.png`，地图四与 JEV 图片保持不变。
 - 验证（2026-10-31）：三个新路径均存在，旧地图一至三图片路径不再被 README 引用；已推送至远程 main（e89fb1e），并在 GitHub 页面确认地图一、二、三新图片正常渲染。
 
+
+### 2026-10-31：清理 GitHub 非必要上传文件
+
+- 阶段/任务：阶段8并列仓库维护，已完成；用户要求检查并删除不必要的已上传文件。
+- [x] 从公开仓库移除 Unity 历史截图备份 `dino-attack/Assets/Stage8Backups/`、视觉报告截图 `dino-attack/Assets/report/`、Unity 自动生成计时器日志 `dino-attack/Assets/ML-Agents/Timers/` 和个人面试学习材料 `docs/interview/`；共 107 个文件，约 9.2 MB。
+- [x] 保留运行所需的 Unity Assets、ProjectSettings、训练器与测试、配置、README 图片和 DinoInference ONNX 模型；在 `.gitignore` 中加入上述生成目录和个人材料路径。
+- 验证（2026-10-31）：删除前审计确认候选目录不被源码或 README 运行时引用；删除后将检查 GitHub 树、远程提交和 README 图片链接。

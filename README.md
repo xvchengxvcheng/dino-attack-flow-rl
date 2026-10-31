@@ -1,6 +1,6 @@
 # Dino Attack · Flow RL
 
-**简体中文** | [English](release-staging/dino-attack-flow-rl/README.en.md)
+**简体中文** | [English](README.en.md)
 
 **搭建可以亲自游玩的战场，让 AI 学习何时、何地部署哪种恐龙，再把训练好的模型放回游戏。**
 
@@ -234,8 +234,6 @@ python -m pip install -r requirements.lock
 | [flow_rl/configs/](flow_rl/configs/) | 各阶段训练配置（PPO / FPO / PolicyFlow，3DBall 与 Dino） |
 | [dino-attack/Assets/Resources/DinoInference/](dino-attack/Assets/Resources/DinoInference/) | 三种 ONNX 模型及 Unity 模型配置 |
 | [docs/PROJECT_PLAN.md](docs/PROJECT_PLAN.md) | 开发阶段、关键决策、验证证据和未完成项 |
-| [docs/interview/Unity战斗与AI项目_秋招学习讲义.md](docs/interview/Unity战斗与AI项目_秋招学习讲义.md) | 战斗 / Unity / AI 模块讲解与面试追问 |
-| [reports/phase8/](reports/phase8/) | 各子任务验证报告 |
 
 ## 基础项目与算法来源
 

@@ -35,3 +35,9 @@
 .env.*
 !.env.example
 /external/
+
+# Generated Unity reports and private learning notes
+/dino-attack/Assets/Stage8Backups/
+/dino-attack/Assets/report/
+/dino-attack/Assets/ML-Agents/Timers/
+/docs/interview/
