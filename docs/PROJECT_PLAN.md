@@ -1345,3 +1345,7 @@ UnityEnvironment.reset()
 - [x] 从公开仓库移除 `flow动作序列.md`、`mlagents_通信.md`、`navmesh的update讲解.md`、`sensor组件.md`、`前沿开源游戏.md` 和 `网络参数正则项.md`；保留 `source-manifest.json` 与未标记的 `train.md`。
 - [x] 在 `.gitignore` 中加入上述六个根目录笔记，防止后续再次上传；本地文件保留未删除。
 - 验证（2026-10-31）：README 和源码无对这些笔记的运行时引用；删除后将检查远程树和提交。
+
+### 2026-10-31：讲解笔记清理完成
+
+- 验证：远程 main 提交 12ac322 已删除图片标出的 6 个根目录讲解笔记；source-manifest.json 与 train.md 仍保留，README 无这些笔记引用。本地文件未删除。
