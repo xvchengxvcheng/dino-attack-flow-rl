@@ -1318,3 +1318,9 @@ UnityEnvironment.reset()
 - [x] 将 README 中 8 个图片引用改为仓库内现有的英文文件名路径，保留图片语义和版式。
 - 验证（2026-10-31）：旧 `../picture` 引用为 0；README 引用的 7 个唯一图片路径全部通过 `Test-Path` 检查。已推送至远程 `main`，并在 GitHub 页面确认地图四和 JEV 图片正常渲染。
 
+
+### 2026-10-31：更新地图一至三 README 图片
+
+- 阶段/任务：阶段8并列仓库维护，已完成；用户要求地图一、二、三使用新图片。
+- [x] README 已改用 `docs/assets/readme/map1-open-battlefield.png`、`map2-random-battlefield.png` 和 `map3-defense-ai.png`，地图四与 JEV 图片保持不变。
+- 验证（2026-10-31）：三个新路径均存在，旧地图一至三图片路径不再被 README 引用；待推送后复核页面渲染。

@@ -42,11 +42,11 @@
 
 | 地图一：开阔战场 | 地图二：分层随机战场 |
 |:---:|:---:|
-| ![地图一开阔战场](docs/assets/readme/open-battlefield.png) | ![地图二随机战场](docs/assets/readme/layered-battlefield.png) |
+| ![地图一开阔战场](docs/assets/readme/map1-open-battlefield.png) | ![地图二随机战场](docs/assets/readme/map2-random-battlefield.png) |
 
 | 地图三：玩家布防，AI 进攻 | 目前可用 AI 策略 |
 |:---:|:---:|
-| ![地图三玩家布防AI进攻](docs/assets/readme/defense-battlefield.png) | ![目前可用算法](docs/assets/readme/ai-strategies.png) |
+| ![地图三玩家布防AI进攻](docs/assets/readme/map3-defense-ai.png) | ![目前可用算法](docs/assets/readme/ai-strategies.png) |
 
 **单局规则**：存活恐龙抵达目标即进攻方获胜；战斗阶段最多 50 秒。部署需要足够资源、合法位置，且场上恐龙未达上限。摧毁房屋可获得额外肉量继续进攻。
 
