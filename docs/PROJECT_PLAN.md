@@ -1323,4 +1323,5 @@ UnityEnvironment.reset()
 
 - 阶段/任务：阶段8并列仓库维护，已完成；用户要求地图一、二、三使用新图片。
 - [x] README 已改用 `docs/assets/readme/map1-open-battlefield.png`、`map2-random-battlefield.png` 和 `map3-defense-ai.png`，地图四与 JEV 图片保持不变。
-- 验证（2026-10-31）：三个新路径均存在，旧地图一至三图片路径不再被 README 引用；待推送后复核页面渲染。
+- 验证（2026-10-31）：三个新路径均存在，旧地图一至三图片路径不再被 README 引用；已推送至远程 main（e89fb1e），并在 GitHub 页面确认地图一、二、三新图片正常渲染。
+
