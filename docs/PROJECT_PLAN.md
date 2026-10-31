@@ -1332,3 +1332,8 @@ UnityEnvironment.reset()
 - [x] 从公开仓库移除 Unity 历史截图备份 `dino-attack/Assets/Stage8Backups/`、视觉报告截图 `dino-attack/Assets/report/`、Unity 自动生成计时器日志 `dino-attack/Assets/ML-Agents/Timers/` 和个人面试学习材料 `docs/interview/`；共 107 个文件，约 9.2 MB。
 - [x] 保留运行所需的 Unity Assets、ProjectSettings、训练器与测试、配置、README 图片和 DinoInference ONNX 模型；在 `.gitignore` 中加入上述生成目录和个人材料路径。
 - 验证（2026-10-31）：删除前审计确认候选目录不被源码或 README 运行时引用；删除后将检查 GitHub 树、远程提交和 README 图片链接。
+
+### 2026-10-31：非必要上传清理完成
+
+- 验证：远程 main 提交 c6462be 已删除历史截图备份、视觉报告截图、Unity 自动计时器日志、个人面试材料及空目录 .meta 残留；远程树中不再存在这些路径。
+- README 复核：English 链接、地图一至三新图片链接和必要 README 图片均有效；已移除指向未上传报告和个人材料的导航行。源码、必要 Unity 资源、训练器、配置和 ONNX 模型保留。
