@@ -1306,7 +1306,8 @@ UnityEnvironment.reset()
 - 阶段/任务：阶段8并列仓库维护，已完成；用户要求将当前 `game_project` 上传至 GitHub。远程仓库为 `https://github.com/xvchengxvcheng/dino-attack-flow-rl.git`，以远程 `main`（`f7d6d9b`）为基线，在临时副本中叠加本地当前源码、训练器、配置、测试和文档，避免覆盖远程已有内容。
 - [x] 保留远程已有 Unity 源码、README、发布清单和历史提交；同步本地 `dino-attack/` 可发布源码与项目设置、`flow_rl/`、`docs/`、脚本及根目录说明文档。
 - [x] 按仓库忽略规则排除 `Library/`、`Temp/`、`Obj/`、`Logs/`、`UserSettings/`、构建、数据集、训练运行结果、报告目录、缓存、IDE 状态和嵌套独立 Git 仓库；未上传 `external/` 中的嵌套仓库。
-- 验证（2026-10-31）：远程 `HEAD` 可读取；临时副本提交前检查共 908 个变更文件，`git diff --cached --check` 通过，未发现超过 GitHub 单文件限制的待提交文件；提交内容已完成 diff 统计与大文件检查；`git diff --cached --check` 对 Unity YAML 空字段、Markdown 硬换行和既有 CRLF 报告格式警告，未作为阻塞项，尚未完成最终 push 验证。
+- 验证（2026-10-31）：远程 `HEAD` 可读取；临时副本提交前检查共 908 个变更文件，`git diff --cached --check` 通过，未发现超过 GitHub 单文件限制的待提交文件；提交内容已完成 diff 统计与大文件检查；`git diff --cached --check` 对 Unity YAML 空字段、Markdown 硬换行和既有 CRLF 报告格式警告，未作为阻塞项，最终 push 已完成并通过远程 `refs/heads/main` 校验（`35e32d63a3e7333bc130f4bb3f7709d7543632fc`）。
 - 产物：远程仓库 `main` 分支；本地原工作区改动保留，上传使用临时副本 `.github-upload-work/`。
+
 
 
