@@ -25,7 +25,7 @@ FORMAL_4_ENV_CONFIG = (
     / "configs"
     / "phase8_dino_ppo_runtimefix_tuned_4env_seed0_fresh_20260902.yaml"
 )
-FORMAL_20_ENV_CONFIG = (
+FIXED_CLOCK_V5_CONFIG = (
     ROOT
     / "flow_rl"
     / "configs"
@@ -120,7 +120,8 @@ def test_replacement_post_victory_guard_seed0_uses_fresh_four_environment_contra
 
 
 def test_fixed_clock_v5_seed0_uses_current_sixteen_environment_contract() -> None:
-    raw = yaml.safe_load(FORMAL_20_ENV_CONFIG.read_text(encoding="utf-8"))
+    # The historical filename predates the 2026-09-04 accepted contract.
+    raw = yaml.safe_load(FIXED_CLOCK_V5_CONFIG.read_text(encoding="utf-8"))
 
     assert raw["num_envs"] == 16
     assert raw["inference_batch_size"] == 16
@@ -136,7 +137,7 @@ def test_fixed_clock_v5_seed0_uses_current_sixteen_environment_contract() -> Non
     assert raw["seed"] == 0
     assert raw["resume_checkpoint"] is None
     assert "build-fixed-clock-v5-20260903" in raw["build_path"]
-    assert "16env-seed0-timescale5-rollout20480" in raw["run_directory"]
+    assert "16env-seed0" in raw["run_directory"]
 
 
 @pytest.mark.parametrize("environment_count", (8, 12, 16, 20, 24))

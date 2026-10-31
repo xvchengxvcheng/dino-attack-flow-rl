@@ -18,7 +18,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             string configVersion,
             IEnumerable<DefensePlacementToken> placements)
         {
-            if (mapId != GameMapId.DefenseBattlefield || layoutSeed == int.MinValue ||
+            if (!mapId.IsDefenseBattlefield || layoutSeed == int.MinValue ||
                 string.IsNullOrWhiteSpace(configVersion) || placements == null)
             {
                 throw new ArgumentException("The defense layout snapshot identity is invalid.");

@@ -6,7 +6,7 @@
     -unity-text-align: upper-center;
     color: var(--light);
     background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Dino Icon Background.png");
-    -unity-background-image-tint-color: rgb(88,60,40);
+    -unity-background-image-tint-color: rgb(48,69,96);
 
     transition: scale 0.125s ease-out, translate 0.125s ease-in-cubic, -unity-background-image-tint-color 0.125s ease-in;
 }
@@ -14,11 +14,11 @@
 .dino-button:enabled:active, .dino-button:enabled:hover {
     scale: 1.05;
     translate: 0 -12px;
-    -unity-background-image-tint-color: rgb(163,129,105);
+    -unity-background-image-tint-color: rgb(84,116,151);
 }
 
 .dino-button:disabled {
-    -unity-background-image-tint-color: rgba(88,60,40,144);
+    -unity-background-image-tint-color: rgba(48,69,96,0.56);
     translate: 0 var(--padding-lg);
 }
 

@@ -9,6 +9,8 @@ from typing import Any
 import torch
 import yaml
 
+from flow_rl.training.validation import validate_finite_parameters
+
 from flow_rl.tracking.checkpoint import load_checkpoint, validate_flow_bc_checkpoint
 
 
@@ -111,6 +113,20 @@ class ReinFlowTrainingConfig:
         return config
 
     def validate(self, *, bc_payload: Mapping[str, Any] | None = None) -> None:
+        validate_finite_parameters(
+            gamma=self.gamma,
+            gae_lambda=self.gae_lambda,
+            actor_learning_rate=self.actor_learning_rate,
+            critic_learning_rate=self.critic_learning_rate,
+            clip_range=self.clip_range,
+            entropy_coefficient=self.entropy_coefficient,
+            max_gradient_norm=self.max_gradient_norm,
+            min_noise_std=self.min_noise_std,
+            max_noise_std=self.max_noise_std,
+            log_prob_min=self.log_prob_min,
+            log_prob_max=self.log_prob_max,
+            time_scale=self.time_scale,
+        )
         if not self.build_path.is_file():
             raise FileNotFoundError(f"Unity build does not exist: {self.build_path}")
         if self.run_directory.is_dir() and any(self.run_directory.iterdir()):

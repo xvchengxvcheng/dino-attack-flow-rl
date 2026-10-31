@@ -1,16 +1,16 @@
 :root {
     font-size: 38px;
-    --light: #F4E8D0;
+    --light: #E5EDF7;
     --light-hover: #ffffff;
-    --dark: #211C19;
-    --dark--hover: #171310;
+    --dark: #172435;
+    --dark--hover: #263B55;
     --green: #5E9A62;
     --green-hover: #00cc00;
     --red: #B54B3E;
     --red-hover: #ff0000;
-    --accent: #D6A85F;
-    --panel: rgba(28, 23, 20, 0.78);
-    --feedback: rgba(22, 33, 31, 0.80);
+    --accent: #7898BB;
+    --panel: rgba(14, 23, 39, 0.92);
+    --feedback: rgba(18, 29, 47, 0.92);
     --padding-sm: 4px;
     --padding-md: 8px;
     --padding-lg: 16px;
@@ -20,7 +20,7 @@
 
 .in {
     scale: 1;
-    transition: scale 0.25s ease-out-elastic;
+    transition: scale 0.18s ease-out;
 }
 .out {
     scale: 0.8;
@@ -29,7 +29,9 @@
 
 #bottom-bar {
     height: 124px;
-    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Grunge Bar-Final.png");
+    background-color: var(--panel);
+    border-top-width: 1px;
+    border-top-color: var(--accent);
     -unity-background-scale-mode: stretch-to-fill;
     -unity-background-image-tint-color: var(--dark);
 }
@@ -93,7 +95,11 @@
     font-size: 40px;
     height: 100%;
     width: 340px;
-    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/Resources Container Background.png");
+    background-color: var(--panel);
+    border-bottom-left-radius: 4px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-color: var(--accent);
     -unity-background-image-tint-color: var(--dark);
     color: var(--light);
 }
@@ -114,14 +120,15 @@
 #start-button {
     position: absolute;
     align-self: center;
-    background-color: rgba(0, 0, 0, 0);
-    border-width: 0;
+    background-color: #294263;
+    border-width: 1px;
+    border-color: var(--accent);
+    border-radius: 4px;
     color: var(--light);
     -unity-font-style: bold;
     font-size: 42px;
-    padding-bottom: 16px;
+    padding-bottom: 0;
 
-    background-image: url("/Assets/LlamAcademy/Dinos/UI/Textures/button.png");
     width: 280px;
     height: 76px;
     scale: 1;
@@ -131,6 +138,20 @@
 #start-button:enabled:active {
     scale: 0.8;
     transition: -unity-background-image-tint-color 0.125s ease-out, scale 0.25s ease-in-out;
+}
+
+#start-button:enabled:hover,
+.result-actions Button:enabled:hover,
+.strategy-options Button:enabled:hover,
+#close-strategy-button:enabled:hover {
+    background-color: #3D5878;
+    border-color: #A7BED8;
+}
+
+#start-button:disabled {
+    background-color: #202B3B;
+    color: #748194;
+    border-color: #44536A;
 }
 
 #center-content {
@@ -219,7 +240,7 @@
     align-items: center;
     justify-content: center;
     padding: 28px 44px;
-    background-color: rgba(18, 14, 12, 0.93);
+    background-color: rgba(10, 17, 31, 0.96);
 }
 
 #session-summary {
@@ -242,10 +263,10 @@
     margin: 5px;
     font-size: 29px;
     color: var(--light);
-    background-color: rgba(33, 28, 25, 0.88);
+    background-color: rgba(37, 57, 82, 0.98);
     border-color: var(--accent);
-    border-width: 2px;
-    border-radius: 10px;
+    border-width: 1px;
+    border-radius: 4px;
 }
 
 .ai-strategy-reason {
@@ -263,7 +284,7 @@
     padding: 14px 20px;
     margin-bottom: 12px;
     border-radius: 10px;
-    background-color: rgba(8, 7, 6, 0.72);
+    background-color: rgba(14, 23, 39, 0.92);
 }
 
 .comparison-status,
@@ -305,7 +326,7 @@
     width: 540px;
     padding: 18px;
     border-radius: 12px;
-    background-color: rgba(8, 7, 6, 0.78);
+    background-color: rgba(14, 23, 39, 0.94);
 }
 
 .strategy-title {
@@ -326,7 +347,7 @@
     height: 58px;
     margin: 5px;
     color: var(--light);
-    background-color: rgba(33, 28, 25, 0.92);
+    background-color: rgba(37, 57, 82, 0.98);
     border-color: var(--accent);
     border-width: 2px;
     border-radius: 9px;
@@ -334,7 +355,7 @@
 }
 
 .strategy-options Button:disabled {
-    color: rgba(244, 232, 208, 0.48);
-    border-color: rgba(214, 168, 95, 0.42);
+    color: rgba(229, 237, 247, 0.48);
+    border-color: rgba(120, 152, 187, 0.42);
 }
 

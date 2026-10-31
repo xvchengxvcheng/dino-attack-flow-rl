@@ -12,6 +12,8 @@ import numpy as np
 import torch
 import yaml
 
+from flow_rl.training.validation import validate_finite_parameters
+
 from flow_rl.data.normalization import IdentityObservationNormalizer
 from flow_rl.envs.dino_protocol import DinoProtocol
 from flow_rl.models.policy import GaussianActorCritic
@@ -137,6 +139,22 @@ class DinoParallelPPOConfig:
         )
 
     def validate(self) -> None:
+        validate_finite_parameters(
+            gamma=self.gamma,
+            gae_lambda=self.gae_lambda,
+            learning_rate=self.learning_rate,
+            final_learning_rate=self.final_learning_rate,
+            clip_range=self.clip_range,
+            final_clip_range=self.final_clip_range,
+            entropy_coefficient=self.entropy_coefficient,
+            final_entropy_coefficient=self.final_entropy_coefficient,
+            value_coefficient=self.value_coefficient,
+            max_gradient_norm=self.max_gradient_norm,
+            time_scale=self.time_scale,
+            poll_timeout=self.poll_timeout,
+            encoder_dropout=self.encoder_dropout,
+            inference_batch_wait_seconds=self.inference_batch_wait_seconds,
+        )
         if not self.build_path.is_file():
             raise FileNotFoundError(f"Unity build does not exist: {self.build_path}")
         if not self.protocol_path.is_file():

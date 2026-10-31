@@ -11,6 +11,8 @@ import numpy as np
 import torch
 import yaml
 
+from flow_rl.training.validation import validate_finite_parameters
+
 from flow_rl.data.demonstrations import DemonstrationBatch, load_demonstrations
 from flow_rl.data.dino_demonstrations import (
     DinoDemonstrationBatch,
@@ -151,6 +153,12 @@ class FlowBCTrainingConfig:
         )
 
     def validate(self) -> None:
+        validate_finite_parameters(
+            learning_rate=self.learning_rate,
+            weight_decay=self.weight_decay,
+            validation_fraction=self.validation_fraction,
+            encoder_dropout=self.encoder_dropout,
+        )
         data_path = self.dataset_directory / "demonstrations.npz"
         metadata_path = self.dataset_directory / "metadata.json"
         if not data_path.is_file() or not metadata_path.is_file():

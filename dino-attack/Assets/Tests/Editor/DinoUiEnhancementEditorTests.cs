@@ -48,7 +48,7 @@ namespace LlamAcademy.Dinos.Tests.Editor
         }
 
         [Test]
-        public void MapSelect_ContainsClosedDinosaurIntroductionWithThreeStatCards()
+        public void MapSelect_ContainsClosedCharacterIntroductionWithDinosaurAndSuguangProfiles()
         {
             Scene scene = EditorSceneManager.OpenScene(MapSelectScene, OpenSceneMode.Single);
             Component controller = UnityEngine.Object.FindObjectsByType<Component>(
@@ -72,11 +72,16 @@ namespace LlamAcademy.Dinos.Tests.Editor
                 .Single(value => value.gameObject.scene == scene && value.name == "Dinosaur Introduction");
             Assert.That(introductionButton.onClick.GetPersistentEventCount(), Is.EqualTo(1));
             Assert.That(introductionButton.onClick.GetPersistentMethodName(0), Is.EqualTo("ShowDinosaurIntroduction"));
+            Assert.That(introductionButton.GetComponentInChildren<Text>(true).text, Is.EqualTo("角色介绍"));
 
             GameObject panel = (GameObject)serialized.FindProperty("DinosaurIntroductionPanel").objectReferenceValue;
             Assert.That(panel.activeSelf, Is.False, "The introduction must not cover map choices at startup.");
+            UnityEngine.UI.Image portrait = panel.transform.Find("Suguang Card/Portrait")?.GetComponent<UnityEngine.UI.Image>();
+            Assert.That(portrait, Is.Not.Null, "Suguang must have a visible character portrait.");
+            Assert.That(portrait.sprite, Is.Not.Null);
+            Assert.That(portrait.raycastTarget, Is.False, "The portrait must not intercept button clicks.");
             string allText = string.Join("\n", panel.GetComponentsInChildren<Text>(true).Select(value => value.text));
-            foreach (string expected in new[] { "肿头龙", "迅猛龙", "霸王龙", "25", "50", "100" })
+            foreach (string expected in new[] { "角色介绍", "肿头龙", "迅猛龙", "霸王龙", "25", "50", "100", "溯光", "技能介绍", "法杖施法", "协同守护", "自主防卫" })
             {
                 StringAssert.Contains(expected, allText);
             }

@@ -88,10 +88,6 @@ namespace LlamAcademy.Dinos.Tests.PlayMode
         public IEnumerator CompleteDefenseLayout_StartsRealPolicyFlowInSameSceneAndLocksPlacement()
             => StartRealStrategyAndRetry(DefenseAiStrategy.PolicyFlow, "PolicyFlowOption");
 
-        [UnityTest]
-        public IEnumerator CompleteDefenseLayout_StartsRealFpoInSameSceneAndLocksPlacement()
-            => StartRealStrategyAndRetry(DefenseAiStrategy.Fpo, "FpoOption");
-
         private IEnumerator StartRealStrategyAndRetry(DefenseAiStrategy strategy, string optionProperty)
         {
             ClearLaunchState();

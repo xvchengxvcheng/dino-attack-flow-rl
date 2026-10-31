@@ -3,13 +3,17 @@ from __future__ import annotations
 import csv
 import math
 from collections.abc import Iterable
+from numbers import Integral
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 from torch.utils.tensorboard import SummaryWriter
 
 if TYPE_CHECKING:
-    from flow_rl.training.dino_parallel_ppo import DinoParallelUpdateSummary
+    from flow_rl.training.dino_parallel_ppo import (
+        DinoParallelEpisodeSummary,
+        DinoParallelUpdateSummary,
+    )
 
 
 _EPISODE_FIELDS = (
@@ -83,6 +87,7 @@ class DinoParallelRunReporter:
         steps_per_second: float,
     ) -> None:
         self._ensure_open()
+        rollout_metrics = self._rollout_metrics(update.completed_episodes)
         if environment_steps < 0 or update_index < 0:
             raise ValueError("environment_steps and update_index cannot be negative")
         for name, value in (
@@ -156,6 +161,8 @@ class DinoParallelRunReporter:
             if name in {"environment_steps", "update_index"}:
                 continue
             self._tensorboard.add_scalar(name, float(value), environment_steps)
+        for name, value in rollout_metrics.items():
+            self._tensorboard.add_scalar(name, value, environment_steps)
         for episode in update.completed_episodes:
             self._episode_csv.writerow(
                 {
@@ -195,6 +202,65 @@ class DinoParallelRunReporter:
             )
         self._episode_handle.flush()
         self._tensorboard.flush()
+
+    def _rollout_metrics(
+        self, episodes: tuple[DinoParallelEpisodeSummary, ...]
+    ) -> dict[str, float]:
+        """Validate before writing; rates describe this rollout's natural endings.
+
+        Episodes can span policy versions. These are online rollout statistics,
+        not a frozen evaluation of the parameters after the optimizer update.
+        """
+        seen = set()
+        for episode in episodes:
+            if episode.environment_id not in self._environment_ids:
+                raise ValueError("episode environment_id is not part of this run")
+            if episode.map_name not in self._map_names:
+                raise ValueError("episode map_name is not part of this run")
+            if not math.isfinite(episode.episode_return) or not math.isfinite(
+                episode.terminal_reward
+            ):
+                raise ValueError("episode return and terminal reward must be finite")
+            if (
+                isinstance(episode.episode_length, bool)
+                or not isinstance(episode.episode_length, Integral)
+                or episode.episode_length <= 0
+            ):
+                raise ValueError("episode_length must be a positive integer")
+            if bool(episode.terminated) == bool(episode.truncated):
+                raise ValueError("episode must be either terminated or truncated")
+            if episode.success and not episode.terminated:
+                raise ValueError("a truncated episode cannot be successful")
+            identity = (
+                episode.environment_id, episode.process_generation,
+                episode.agent_id, episode.episode_index,
+            )
+            if identity in seen:
+                raise ValueError("duplicate episode in update")
+            seen.add(identity)
+
+        groups = {"rollout": episodes}
+        groups.update({
+            f"rollout/{name}": tuple(e for e in episodes if e.map_name == name)
+            for name in self._map_names
+        })
+        metrics: dict[str, float] = {}
+        for prefix, group in groups.items():
+            natural = tuple(e for e in group if e.terminated)
+            count = len(natural)
+            successes = sum(bool(e.success) for e in natural)
+            metrics[f"{prefix}/natural_episodes"] = float(count)
+            metrics[f"{prefix}/truncated_episodes"] = float(len(group) - count)
+            metrics[f"{prefix}/successful_episodes"] = float(successes)
+            if count:
+                metrics[f"{prefix}/success_rate"] = successes / count
+                metrics[f"{prefix}/mean_return"] = math.fsum(
+                    e.episode_return / count for e in natural
+                )
+                metrics[f"{prefix}/mean_length"] = math.fsum(
+                    e.episode_length / count for e in natural
+                )
+        return metrics
 
     def close(self) -> None:
         if self._closed:

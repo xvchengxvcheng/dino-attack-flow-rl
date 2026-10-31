@@ -1,0 +1,72 @@
+{
+  "materials": [
+    {
+      "name": "F00_000_00_EyeExtra_01_EYE",
+      "texture": "Textures/F00_000_00_EyeExtra_01_EYE.png"
+    },
+    {
+      "name": "F00_000_00_EyeHighlight_00_EYE",
+      "texture": "Textures/F00_000_00_EyeHighlight_00_EYE.png"
+    },
+    {
+      "name": "F00_000_00_EyeIris_00_EYE",
+      "texture": "Textures/F00_000_00_EyeIris_00_EYE.png"
+    },
+    {
+      "name": "F00_000_00_EyeWhite_00_EYE",
+      "texture": "Textures/F00_000_00_EyeWhite_00_EYE.png"
+    },
+    {
+      "name": "F00_000_00_Face_00_SKIN",
+      "texture": "Textures/F00_000_00_Face_00_SKIN.png"
+    },
+    {
+      "name": "F00_000_00_FaceBrow_00_FACE",
+      "texture": "Textures/F00_000_00_FaceBrow_00_FACE.png"
+    },
+    {
+      "name": "F00_000_00_FaceEyelash_00_FACE",
+      "texture": "Textures/F00_000_00_FaceEyelash_00_FACE.png"
+    },
+    {
+      "name": "F00_000_00_FaceEyeline_00_FACE",
+      "texture": "Textures/F00_000_00_FaceEyeline_00_FACE.png"
+    },
+    {
+      "name": "F00_000_00_FaceMouth_00_FACE",
+      "texture": "Textures/F00_000_00_FaceMouth_00_FACE.png"
+    },
+    {
+      "name": "F00_000_Hair_00_HAIR_01",
+      "texture": "Textures/F00_000_Hair_00_HAIR_01.png"
+    },
+    {
+      "name": "F00_000_Hair_00_HAIR_02",
+      "texture": "Textures/F00_000_Hair_00_HAIR_02.png"
+    },
+    {
+      "name": "F00_000_HairBack_00_HAIR",
+      "texture": "Textures/F00_000_HairBack_00_HAIR.png"
+    },
+    {
+      "name": "F00_001_01_AccessoryNeck_01_CLOTH",
+      "texture": "Textures/F00_001_01_AccessoryNeck_01_CLOTH.png"
+    },
+    {
+      "name": "F00_001_01_Body_00_SKIN",
+      "texture": "Textures/F00_001_01_Body_00_SKIN.png"
+    },
+    {
+      "name": "F00_001_01_Bottoms_01_CLOTH",
+      "texture": "Textures/F00_001_01_Bottoms_01_CLOTH.png"
+    },
+    {
+      "name": "F00_001_01_Shoes_01_CLOTH",
+      "texture": "Textures/F00_001_01_Shoes_01_CLOTH.png"
+    },
+    {
+      "name": "F00_001_01_Tops_01_CLOTH",
+      "texture": "Textures/F00_001_01_Tops_01_CLOTH.png"
+    }
+  ]
+}

@@ -102,13 +102,18 @@ namespace LlamAcademy.Dinos.Tests.Editor
         }
 
         [Test]
-        public void VisualPolishLighting_UsesWarmNeutralAmbientWithoutBlueCast()
+        public void VisualPolishLighting_UsesReadableStarNightAmbient()
         {
             Assert.That(RenderSettings.ambientMode, Is.EqualTo(UnityEngine.Rendering.AmbientMode.Trilight));
-            Assert.That(RenderSettings.ambientSkyColor.r, Is.GreaterThan(RenderSettings.ambientSkyColor.b));
-            Assert.That(RenderSettings.ambientEquatorColor.r, Is.GreaterThan(RenderSettings.ambientEquatorColor.b));
-            Assert.That(RenderSettings.ambientGroundColor.r, Is.GreaterThan(RenderSettings.ambientGroundColor.b));
-            Assert.That(RenderSettings.fogColor.r, Is.GreaterThan(RenderSettings.fogColor.b));
+            Assert.That(RenderSettings.ambientSkyColor.b, Is.GreaterThan(RenderSettings.ambientSkyColor.r));
+            Assert.That(RenderSettings.ambientEquatorColor.b, Is.GreaterThan(RenderSettings.ambientEquatorColor.r));
+            Assert.That(RenderSettings.ambientGroundColor.b, Is.GreaterThan(RenderSettings.ambientGroundColor.r));
+            Assert.That(RenderSettings.ambientEquatorColor.maxColorComponent, Is.GreaterThanOrEqualTo(0.5f),
+                "Night presentation must retain enough ambient fill for terrain and units.");
+            Assert.That(RenderSettings.fogColor.b, Is.GreaterThan(RenderSettings.fogColor.r));
+            Assert.That(RenderSettings.skybox, Is.Not.Null);
+            Assert.That(RenderSettings.skybox.shader.name, Is.EqualTo("DinoAttack/Skybox/StarNight"));
+            Assert.That(RenderSettings.sun.intensity, Is.GreaterThanOrEqualTo(0.9f));
 
             Material water = AssetDatabase.LoadAssetAtPath<Material>(
                 "Assets/LlamAcademy/Dinos/Stage8/Materials/ShallowWaterTeal.mat");

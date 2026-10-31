@@ -66,7 +66,7 @@ namespace LlamAcademy.Dinos.Tests.Editor
             SerializedObject controllerData = new(controller);
             foreach (string field in new[]
                      {
-                         "OpenTropicalButton", "LayeredBattlefieldButton", "DefenseBattlefieldButton", "DinosaurIntroductionButton",
+                         "OpenTropicalButton", "LayeredBattlefieldButton", "DefenseBattlefieldButton", "FirstPersonDefenseBattlefieldButton", "JevVillageDemoButton", "DinosaurIntroductionButton",
                          "DinosaurIntroductionPanel", "CloseIntroductionButton", "RestartService", "StatusText"
                      })
                 Assert.That(controllerData.FindProperty(field).objectReferenceValue, Is.Not.Null,
@@ -79,13 +79,17 @@ namespace LlamAcademy.Dinos.Tests.Editor
             {
                 "Open Tropical Battlefield", "Layered Battlefield", "Dinosaur Introduction",
                 "Defense Battlefield",
+                "First Person Defense Battlefield", "JEV Village Demo", "Companion Relationship Lab",
                 "Close Dinosaur Introduction"
             }));
             foreach ((string name, string method) in new[]
                      {
                          ("Open Tropical Battlefield", "LaunchOpenTropicalBattlefield"),
                          ("Layered Battlefield", "LaunchLayeredBattlefield"),
-                         ("Defense Battlefield", "LaunchDefenseBattlefield")
+                         ("Defense Battlefield", "LaunchDefenseBattlefield"),
+                         ("First Person Defense Battlefield", "LaunchFirstPersonDefenseBattlefield"),
+                         ("JEV Village Demo", "LaunchJevVillageDemo"),
+                         ("Companion Relationship Lab", "Launch")
                      })
             {
                 Button button = buttons.Single(value => value.name == name);
@@ -93,6 +97,9 @@ namespace LlamAcademy.Dinos.Tests.Editor
                     $"{name} must store exactly one persistent scene listener.");
                 Assert.That(button.onClick.GetPersistentMethodName(0), Is.EqualTo(method),
                     $"{name} must launch its map without a second Start click.");
+                if (name == "Companion Relationship Lab")
+                    Assert.That(button.onClick.GetPersistentTarget(0).GetType().FullName,
+                        Is.EqualTo("LlamAcademy.Dinos.Companion.CompanionLabLauncher"));
             }
 
             EventSystem eventSystem = Object.FindFirstObjectByType<EventSystem>(FindObjectsInactive.Include);

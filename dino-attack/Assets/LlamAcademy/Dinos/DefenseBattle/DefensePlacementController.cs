@@ -47,11 +47,14 @@ namespace LlamAcademy.Dinos.DefenseBattle
         private Material AreaFillMaterial;
         private Vector3 ResolvedGhostPosition;
         private bool GhostIsLegal;
+        private string GhostRejectReason = string.Empty;
 
         public DefenseInventoryState Inventory => InventoryValue;
         public DefensePlacementKind? Selection => SelectedKind;
         public bool IsLocked { get; private set; }
         public bool IsComplete => InventoryValue.IsComplete;
+        public GameMapId CurrentMap => GameMapId.TryFromSceneName(gameObject.scene.name, out GameMapId map)
+            && map.IsDefenseBattlefield ? map : GameMapId.DefenseBattlefield;
         public int AliveGroundGuards => Placed.Count(value => value != null && value.Kind != DefensePlacementKind.Wall && value.IsAlive);
         public int AliveWalls => Placed.Count(value => value != null && value.Kind == DefensePlacementKind.Wall && value.IsAlive);
 
@@ -111,7 +114,8 @@ namespace LlamAcademy.Dinos.DefenseBattle
                 CancelSelection();
             }
 
-            if (Mouse.current.rightButton.wasReleasedThisFrame)
+            bool overUi = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+            if (Mouse.current.rightButton.wasReleasedThisFrame && !overUi)
             {
                 TryRemoveAtPointer();
             }
@@ -121,18 +125,26 @@ namespace LlamAcademy.Dinos.DefenseBattle
                 return;
             }
 
-            bool overUi = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
             Ray ray = PlacementCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (!Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, GroundLayer, QueryTriggerInteraction.Ignore))
             {
+                GhostRejectReason = "没有检测到可放置地面";
                 SetGhostVisible(false);
+                if (Mouse.current.leftButton.wasReleasedThisFrame && !overUi)
+                {
+                    PlacementRejected?.Invoke(GhostRejectReason);
+                }
                 return;
             }
 
             SetGhostVisible(true);
             Ghost.transform.SetPositionAndRotation(hit.point, GetPlacementRotation(SelectedKind.Value));
             GhostIsLegal = !overUi && TryResolveLegalPosition(SelectedKind.Value, Ghost, hit.point,
-                out ResolvedGhostPosition, out _);
+                out ResolvedGhostPosition, out GhostRejectReason);
+            if (overUi)
+            {
+                GhostRejectReason = "指针位于界面上";
+            }
             Ghost.transform.position = ResolvedGhostPosition;
             SetGhostColor(GhostIsLegal ? new Color(0.12f, 0.62f, 1f, 0.7f) : new Color(1f, 0.18f, 0.12f, 0.7f));
 
@@ -144,7 +156,9 @@ namespace LlamAcademy.Dinos.DefenseBattle
                 }
                 else
                 {
-                    PlacementRejected?.Invoke("该位置不可放置");
+                    PlacementRejected?.Invoke(string.IsNullOrEmpty(GhostRejectReason)
+                        ? "该位置不可放置"
+                        : GhostRejectReason);
                 }
             }
         }
@@ -157,6 +171,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             }
 
             SelectedKind = kind;
+            GhostRejectReason = string.Empty;
             RebuildGhost(kind);
             StateChanged?.Invoke();
             return true;
@@ -165,6 +180,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
         public void CancelSelection()
         {
             SelectedKind = null;
+            GhostRejectReason = string.Empty;
             DestroyGhost();
             StateChanged?.Invoke();
         }
@@ -190,7 +206,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
                 ? 20260831
                 : GameSessionRestartService.Instance.CurrentStartSeed;
             snapshot = new DefenseLayoutSnapshot(
-                GameMapId.DefenseBattlefield,
+                CurrentMap,
                 seed,
                 SnapshotConfigVersion,
                 Placed.Select(ToToken));
@@ -200,7 +216,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
 
         public bool TryRestoreSnapshot(DefenseLayoutSnapshot snapshot, out string reason)
         {
-            if (snapshot == null || snapshot.MapId != GameMapId.DefenseBattlefield ||
+            if (snapshot == null || snapshot.MapId != CurrentMap ||
                 snapshot.ConfigVersion != SnapshotConfigVersion || Placed.Count != 0)
             {
                 reason = "保存的布防布局不兼容";
@@ -321,6 +337,23 @@ namespace LlamAcademy.Dinos.DefenseBattle
             RaycastHit[] hits = Physics.RaycastAll(ray, float.MaxValue, ~0, QueryTriggerInteraction.Ignore);
             PlacedDefenseHandle handle = hits.Select(hit => hit.collider.GetComponentInParent<PlacedDefenseHandle>())
                 .FirstOrDefault(value => value != null);
+            if (handle == null)
+            {
+                // Some guard prefabs expose renderers without a physics collider. Use
+                // their visual bounds as a removal fallback so every placed unit can
+                // be selected consistently with the pointer.
+                float nearestDistance = float.MaxValue;
+                foreach (PlacedDefenseHandle candidate in Placed)
+                {
+                    if (candidate == null) continue;
+                    Bounds bounds = CalculateBounds(candidate.gameObject);
+                    if (bounds.IntersectRay(ray, out float distance) && distance < nearestDistance)
+                    {
+                        nearestDistance = distance;
+                        handle = candidate;
+                    }
+                }
+            }
             if (handle == null || !InventoryValue.TryReturn(handle.Kind, out DefenseInventoryState next))
             {
                 return;

@@ -13,6 +13,8 @@ namespace LlamAcademy.Dinos.UI
         [SerializeField] private Button OpenTropicalButton;
         [SerializeField] private Button LayeredBattlefieldButton;
         [SerializeField] private Button DefenseBattlefieldButton;
+        [SerializeField] private Button FirstPersonDefenseBattlefieldButton;
+        [SerializeField] private Button JevVillageDemoButton;
         [SerializeField] private Button DinosaurIntroductionButton;
         [SerializeField] private GameObject DinosaurIntroductionPanel;
         [SerializeField] private Button CloseIntroductionButton;
@@ -34,18 +36,20 @@ namespace LlamAcademy.Dinos.UI
         public void LaunchLayeredBattlefield() => Launch(GameMapId.LayeredBattlefield);
 
         public void LaunchDefenseBattlefield() => Launch(GameMapId.DefenseBattlefield);
+        public void LaunchFirstPersonDefenseBattlefield() => Launch(GameMapId.FirstPersonDefenseBattlefield);
+        public void LaunchJevVillageDemo() => Launch(GameMapId.JevVillageDemo);
 
         public void ShowDinosaurIntroduction()
         {
             if (DinosaurIntroductionPanel == null)
             {
-                SetStatus("恐龙介绍暂不可用");
+                SetStatus("角色介绍暂不可用");
                 return;
             }
 
             DinosaurIntroductionPanel.transform.SetAsLastSibling();
             DinosaurIntroductionPanel.SetActive(true);
-            SetStatus("恐龙介绍");
+            SetStatus("角色介绍");
         }
 
         public void HideDinosaurIntroduction()

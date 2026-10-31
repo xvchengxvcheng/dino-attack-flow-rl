@@ -34,3 +34,4 @@
 .env
 .env.*
 !.env.example
+/external/

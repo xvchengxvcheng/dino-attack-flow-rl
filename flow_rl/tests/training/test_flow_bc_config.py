@@ -188,7 +188,10 @@ def test_flow_bc_config_loads_structured_dino_dataset_with_identity_normalizer(
 ) -> None:
     from flow_rl.training.flow_bc_config import FlowBCTrainingConfig
 
-    protocol_path = (Path(__file__).resolve().parents[3] / "flow_rl/configs/dino_attack_structured_set_v2.yaml").resolve()
+    protocol_path = (
+        Path(__file__).resolve().parents[2]
+        / "configs" / "dino_attack_structured_set_v2.yaml"
+    )
     protocol = DinoProtocol.from_yaml(protocol_path)
     build = tmp_path / "Dino.exe"
     build.write_bytes(b"dino-build")

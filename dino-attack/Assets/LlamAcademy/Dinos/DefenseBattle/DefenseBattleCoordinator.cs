@@ -110,7 +110,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             GameSessionRestartService restart = GameSessionRestartService.Instance;
             int layoutSeed = restart == null ? snapshot.LayoutSeed : restart.CurrentStartSeed;
             GameLaunchRequest inferenceRequest = new(
-                GameMapId.DefenseBattlefield,
+                Placement.CurrentMap,
                 layoutSeed,
                 GameControllerMode.InferenceAI,
                 option.InferenceSeed,
@@ -159,7 +159,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
         {
             if (Phase != DefenseBattlePhase.Result || FrozenLayout == null) return;
             DefenseBattleReplayContext.PublishRetry(FrozenLayout);
-            if (!TrySchedule(GameLaunchRequest.CreateHuman(GameMapId.DefenseBattlefield, FrozenLayout.LayoutSeed)))
+            if (!TrySchedule(GameLaunchRequest.CreateHuman(FrozenLayout.MapId, FrozenLayout.LayoutSeed)))
             {
                 DefenseBattleReplayContext.Clear();
             }
@@ -173,7 +173,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
                 ? FrozenLayout?.LayoutSeed ?? 0
                 : GameSessionRestartService.Instance.CurrentStartSeed;
             TrySchedule(GameLaunchRequest.CreateHuman(
-                GameMapId.DefenseBattlefield,
+                Placement.CurrentMap,
                 GameLaunchContext.DeriveNextLayoutSeed(currentSeed)));
         }
 

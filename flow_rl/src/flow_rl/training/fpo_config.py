@@ -8,6 +8,8 @@ from typing import Any
 import torch
 import yaml
 
+from flow_rl.training.validation import validate_finite_parameters
+
 
 @dataclass(frozen=True)
 class FPOTrainingConfig:
@@ -99,6 +101,18 @@ class FPOTrainingConfig:
         return config
 
     def validate(self) -> None:
+        validate_finite_parameters(
+            gamma=self.gamma,
+            gae_lambda=self.gae_lambda,
+            learning_rate=self.learning_rate,
+            final_learning_rate=self.final_learning_rate,
+            clip_range=self.clip_range,
+            final_clip_range=self.final_clip_range,
+            max_gradient_norm=self.max_gradient_norm,
+            difference_clip=self.difference_clip,
+            time_scale=self.time_scale,
+            encoder_dropout=self.encoder_dropout,
+        )
         if not self.build_path.is_file():
             raise FileNotFoundError(f"Unity build does not exist: {self.build_path}")
         if self.run_directory.is_dir() and any(self.run_directory.iterdir()):

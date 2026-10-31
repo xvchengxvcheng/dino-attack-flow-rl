@@ -1,0 +1,783 @@
+{
+  "generator": "Motifect Asset Pack Generator",
+  "generator_url": "https://motifect.io",
+  "pack_name": "Locomotion Complete",
+  "pack_slug": "locomotion_complete",
+  "version": "1.0",
+  "generated_at": "2026-05-08T04:58:04.066102+00:00",
+  "engine": "kimodo",
+  "model": "Kimodo-SOMA-RP-v1",
+  "export_formats": [
+    "npz",
+    "fbx",
+    "bvh",
+    "glb"
+  ],
+  "motions": [
+    {
+      "slug": "idle_neutral",
+      "prompt": "A person stands upright in a relaxed idle pose, weight evenly distributed, arms at their sides with subtle natural breathing.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044724Z-6952e55f"
+    },
+    {
+      "slug": "idle_alert",
+      "prompt": "A person stands in an alert ready stance, feet slightly apart, head scanning slowly left and right as if watching for threats.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044739Z-88e918cc"
+    },
+    {
+      "slug": "idle_relaxed_weight_shift",
+      "prompt": "A person stands casually shifting their weight from one foot to the other, arms loosely crossed, in a relaxed waiting pose.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044754Z-6e37d22f"
+    },
+    {
+      "slug": "idle_looking_around",
+      "prompt": "A person stands and slowly turns their head and upper body to survey the surroundings, then returns to center.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044808Z-aed199c4"
+    },
+    {
+      "slug": "walk_forward",
+      "prompt": "A person walks forward at a natural, comfortable pace with easy arm swings.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044823Z-201d366d"
+    },
+    {
+      "slug": "walk_backward",
+      "prompt": "A person walks backward at a careful pace, looking ahead, stepping deliberately.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044837Z-fbc394be"
+    },
+    {
+      "slug": "walk_strafe_left",
+      "prompt": "A person sidesteps to the left while facing forward, crossing feet smoothly.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044851Z-62933a16"
+    },
+    {
+      "slug": "walk_strafe_right",
+      "prompt": "A person sidesteps to the right while facing forward, crossing feet smoothly.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044905Z-1b82ca81"
+    },
+    {
+      "slug": "walk_cautious",
+      "prompt": "A cautious person walks forward very slowly and carefully, hunched slightly, placing each foot gently as if trying not to make noise.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044919Z-4a4e3884"
+    },
+    {
+      "slug": "walk_confident",
+      "prompt": "A confident person walks forward with confident, purposeful strides, chin up, shoulders back, arms swinging with authority.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044933Z-e1fa77ab"
+    },
+    {
+      "slug": "walk_tired",
+      "prompt": "A tired person trudges forward with heavy, sluggish steps, shoulders drooping, barely lifting their feet off the ground.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T044947Z-dba74500"
+    },
+    {
+      "slug": "walk_carrying_heavy",
+      "prompt": "A person walks forward while holding a heavy object with both hands at waist level, torso leaning slightly back.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045002Z-046de545"
+    },
+    {
+      "slug": "run_jog",
+      "prompt": "A person jogs forward at a moderate, comfortable pace, arms pumping at a relaxed rhythm.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045016Z-5895ea2d"
+    },
+    {
+      "slug": "run_sprint",
+      "prompt": "A person sprints at full speed, body leaning forward, arms pumping aggressively, legs driving hard.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045030Z-4355bf5f"
+    },
+    {
+      "slug": "run_backward",
+      "prompt": "A person runs backward at a brisk pace, glancing over their shoulder, arms swinging opposite to their legs.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045044Z-f7886fd1"
+    },
+    {
+      "slug": "run_strafe_left",
+      "prompt": "A person runs sideways to the left at a fast pace while keeping their body facing forward.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045058Z-6a785e71"
+    },
+    {
+      "slug": "run_strafe_right",
+      "prompt": "A person runs sideways to the right at a fast pace while keeping their body facing forward.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045117Z-93a1675b"
+    },
+    {
+      "slug": "run_panic",
+      "prompt": "A panicked person runs forward in a panicked sprint, looking back over their shoulder, arms flailing, movements frantic and uneven.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045130Z-e575db74"
+    },
+    {
+      "slug": "jump_standing",
+      "prompt": "A person bends their knees, pushes off the ground with both feet, reaches peak height, and lands softly with bent knees.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045144Z-55237940"
+    },
+    {
+      "slug": "jump_running",
+      "prompt": "A person launches into a running jump from one foot, clearing a gap, arms reaching forward, landing on both feet.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045158Z-9736b6e7"
+    },
+    {
+      "slug": "jump_long_distance",
+      "prompt": "A person takes several running steps and launches into a long jump, body horizontal in the air, landing far ahead.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045212Z-53362dae"
+    },
+    {
+      "slug": "land_soft",
+      "prompt": "A person drops from a height and lands softly on both feet, absorbing impact with deeply bent knees, then straightens up.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045226Z-754e525a"
+    },
+    {
+      "slug": "land_hard_roll",
+      "prompt": "A person falls from a height, hits the ground and immediately rolls forward to absorb impact, then rises to their feet.",
+      "duration_seconds": 6.0,
+      "actual_duration_seconds": 6.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045240Z-8cdc0a75"
+    },
+    {
+      "slug": "vault_obstacle",
+      "prompt": "A person approaches a waist-high obstacle, places both hands on it, pushes off, and swings their legs over to the other side.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045254Z-33b7a67b"
+    },
+    {
+      "slug": "climb_ledge",
+      "prompt": "A person reaches up to grab a ledge above them, pulls themselves up with both arms, swings a leg over, and stands on top.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045308Z-3be89130"
+    },
+    {
+      "slug": "crouch_idle",
+      "prompt": "A person is crouched low on both feet, maintaining a stable, still position with hands near the ground.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045323Z-8f9a03d5"
+    },
+    {
+      "slug": "crouch_walk_forward",
+      "prompt": "A person walks forward in a low crouched position, taking short quiet steps.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045337Z-a13f44b2"
+    },
+    {
+      "slug": "crouch_walk_backward",
+      "prompt": "A person moves backward while crouched, taking careful quiet steps.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045351Z-9f54e6e4"
+    },
+    {
+      "slug": "crouch_rise_up",
+      "prompt": "A person rises smoothly from a crouched position to a full standing stance.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045405Z-51a06b72"
+    },
+    {
+      "slug": "crawl_forward",
+      "prompt": "A person crawls forward on hands and knees, moving smoothly and quietly across the ground.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045419Z-cc9bfaa0"
+    },
+    {
+      "slug": "army_crawl",
+      "prompt": "A person lies flat and pulls themselves forward on their elbows and forearms, keeping low to the ground.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045434Z-a28e874b"
+    },
+    {
+      "slug": "climb_stairs_up",
+      "prompt": "A person climbs up a flight of stairs, alternating feet, holding a railing on the right side.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045449Z-309276c7"
+    },
+    {
+      "slug": "climb_stairs_down",
+      "prompt": "A person walks down a flight of stairs carefully, alternating feet, gripping a railing.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045503Z-dbb2addb"
+    },
+    {
+      "slug": "turn_left_90",
+      "prompt": "A person turns 90 degrees to the left in place, pivoting on their right foot while walking.",
+      "duration_seconds": 3.0,
+      "actual_duration_seconds": 3.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045517Z-2f26b9bf"
+    },
+    {
+      "slug": "turn_right_90",
+      "prompt": "A person turns 90 degrees to the right in place, pivoting on their left foot while walking.",
+      "duration_seconds": 3.0,
+      "actual_duration_seconds": 3.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045531Z-3a274709"
+    },
+    {
+      "slug": "turn_180",
+      "prompt": "A person spins 180 degrees in place to face the opposite direction, stepping around quickly.",
+      "duration_seconds": 3.0,
+      "actual_duration_seconds": 3.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045544Z-e551a3a5"
+    },
+    {
+      "slug": "direction_change_sharp",
+      "prompt": "A person running forward plants their foot hard and sharply cuts 90 degrees to the right, accelerating in the new direction.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045558Z-03210847"
+    },
+    {
+      "slug": "stop_from_run",
+      "prompt": "A person decelerates from a full sprint and comes to a complete stop, feet firmly planted.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045612Z-749381b3"
+    },
+    {
+      "slug": "start_sprint",
+      "prompt": "A person launches from a standing still position into a full sprint, explosively pushing off one foot.",
+      "duration_seconds": 4.0,
+      "actual_duration_seconds": 4.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045626Z-8afde527"
+    },
+    {
+      "slug": "tiptoe_walk",
+      "prompt": "A stealthy person walks forward on their tiptoes, arms slightly raised for balance, moving quietly and carefully.",
+      "duration_seconds": 7.0,
+      "actual_duration_seconds": 7.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045640Z-f9fa04ea"
+    },
+    {
+      "slug": "stumble_recover",
+      "prompt": "A person trips, staggers forward losing balance, then catches themselves and recovers to a normal stance.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045654Z-388f258d"
+    },
+    {
+      "slug": "step_over_obstacle",
+      "prompt": "A person lifts one leg high to step over a low obstacle on the ground, then continues walking forward.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045708Z-ff60c958"
+    },
+    {
+      "slug": "back_to_wall",
+      "prompt": "A stealthy person presses their back against a wall, slides along it to the side, then peeks out carefully.",
+      "duration_seconds": 10.0,
+      "actual_duration_seconds": 10.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045722Z-f5730a8d"
+    },
+    {
+      "slug": "roll_forward",
+      "prompt": "A person tucks their chin and performs a smooth forward roll along the ground, returning to a standing position.",
+      "duration_seconds": 5.0,
+      "actual_duration_seconds": 5.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045736Z-ebe46397"
+    },
+    {
+      "slug": "sidestep_dodge",
+      "prompt": "A person quickly lunges to the right to dodge, then pushes off to continue moving, a reactive evasion step.",
+      "duration_seconds": 3.0,
+      "actual_duration_seconds": 3.0,
+      "status": "ok",
+      "files": [
+        "motion.bvh",
+        "motion.fbx",
+        "motion.glb",
+        "motion.npz",
+        "stderr.log",
+        "stdout.log",
+        "thumbnail.png"
+      ],
+      "job_id": "job-20260508T045750Z-217a8bb2"
+    }
+  ]
+}

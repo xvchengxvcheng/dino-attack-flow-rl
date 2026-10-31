@@ -10,9 +10,9 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import torch
 import yaml
-import numpy as np
 
 from flow_rl.data.normalization import IdentityObservationNormalizer
 from flow_rl.envs.dino_protocol import DinoProtocol
@@ -28,6 +28,7 @@ from flow_rl.training.dino_parallel_ppo_config import (
     DinoParallelResumeState,
 )
 from flow_rl.training.fpo_trainer import FPO_SOURCE_COMMIT
+from flow_rl.training.validation import validate_finite_parameters
 
 
 _PROTOCOL_VERSION = "dino_attack_structured_set_v2"
@@ -138,6 +139,20 @@ class DinoParallelFPOConfig:
     def validate(self) -> None:
         if self.resume_checkpoint is not None and self.warm_start_checkpoint is not None:
             raise ValueError("resume_checkpoint and warm_start_checkpoint are mutually exclusive")
+        validate_finite_parameters(
+            gamma=self.gamma,
+            gae_lambda=self.gae_lambda,
+            learning_rate=self.learning_rate,
+            final_learning_rate=self.final_learning_rate,
+            clip_range=self.clip_range,
+            final_clip_range=self.final_clip_range,
+            max_gradient_norm=self.max_gradient_norm,
+            difference_clip=self.difference_clip,
+            time_scale=self.time_scale,
+            poll_timeout=self.poll_timeout,
+            encoder_dropout=self.encoder_dropout,
+            inference_batch_wait_seconds=self.inference_batch_wait_seconds,
+        )
         if not self.build_path.is_file():
             raise FileNotFoundError(f"Unity build does not exist: {self.build_path}")
         if not self.protocol_path.is_file():

@@ -1,0 +1,80 @@
+{
+  "source_heads": {
+    ".": "209725f4087dd4e04e5f15ca48efd4a3de69733b",
+    "dino-attack": "7a0c2001ca349b146d7a74becaa31a133f7e1613"
+  },
+  "files_copied": 2611,
+  "bytes_copied": 394980735,
+  "excluded": [
+    "dino-attack/Assets/Stage8Backups.meta",
+    "dino-attack/Assets/Stage8Backups/20260828.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/baseline-game.png",
+    "dino-attack/Assets/Stage8Backups/20260828/baseline-game.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/baseline-scene.png",
+    "dino-attack/Assets/Stage8Backups/20260828/baseline-scene.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.6-greybox-game.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.6-greybox-game.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.7-visual-game.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.7-visual-game.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.7-visual-scene.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.7-visual-scene.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.8-ui-playmode.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.8-ui-playmode.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.9-reload-smoke.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.9-reload-smoke.png.meta",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.9-running-smoke.png",
+    "dino-attack/Assets/Stage8Backups/20260828/task-8.9-running-smoke.png.meta",
+    "dino-attack/Assets/Temp.meta",
+    "dino-attack/Assets/Temp/visual-polish-task5-home-play-2.png",
+    "dino-attack/Assets/Temp/visual-polish-task5-home-play-2.png.meta",
+    "dino-attack/Assets/Temp/visual-polish-task5-home-play.png",
+    "dino-attack/Assets/Temp/visual-polish-task5-home-play.png.meta",
+    "dino-attack/Assets/report.meta",
+    "dino-attack/Assets/report/environment-art-current.png",
+    "dino-attack/Assets/report/environment-art-current.png.meta",
+    "dino-attack/Assets/report/final-user-review-corrections.png",
+    "dino-attack/Assets/report/final-user-review-corrections.png.meta",
+    "dino-attack/Assets/report/user-review-runtime.png",
+    "dino-attack/Assets/report/user-review-runtime.png.meta",
+    "dino-attack/Assets/report/visual-polish-a-camera-play.png",
+    "dino-attack/Assets/report/visual-polish-a-camera-play.png.meta",
+    "dino-attack/Assets/report/visual-polish-a-camera-start.png",
+    "dino-attack/Assets/report/visual-polish-a-camera-start.png.meta",
+    "dino-attack/Assets/report/visual-polish-final-running.png",
+    "dino-attack/Assets/report/visual-polish-final-running.png.meta",
+    "dino-attack/Assets/report/visual-polish-final-start.png",
+    "dino-attack/Assets/report/visual-polish-final-start.png.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOCompactPostfixTunedSeed0_1574283.manifest.json",
+    "dino-attack/Assets/Resources/DinoInference/PPOCompactPostfixTunedSeed0_1574283.manifest.json.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOCompactPostfixTunedSeed0_1574283.onnx",
+    "dino-attack/Assets/Resources/DinoInference/PPOCompactPostfixTunedSeed0_1574283.onnx.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOFormalSeed0_1050435_ObservationOnly.manifest.json",
+    "dino-attack/Assets/Resources/DinoInference/PPOFormalSeed0_1050435_ObservationOnly.manifest.json.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOFormalSeed0_1050435_ObservationOnly.onnx",
+    "dino-attack/Assets/Resources/DinoInference/PPOFormalSeed0_1050435_ObservationOnly.onnx.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale10Step1442765.manifest.json",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale10Step1442765.manifest.json.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale10Step1442765.onnx",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale10Step1442765.onnx.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale5Step1312449.manifest.json",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale5Step1312449.manifest.json.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale5Step1312449.onnx",
+    "dino-attack/Assets/Resources/DinoInference/PPONavMesh16EnvSeed0TimeScale5Step1312449.onnx.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOSeed0_40988_ObservationOnly.manifest.json",
+    "dino-attack/Assets/Resources/DinoInference/PPOSeed0_40988_ObservationOnly.manifest.json.meta",
+    "dino-attack/Assets/Resources/DinoInference/PPOSeed0_40988_ObservationOnly.onnx",
+    "dino-attack/Assets/Resources/DinoInference/PPOSeed0_40988_ObservationOnly.onnx.meta"
+  ],
+  "retained_referenced_groups": [
+    {
+      "group": "dino-attack/Assets/LlamAcademy/Dinos/Scenes/Backups",
+      "references": [
+        "dino-attack/Assets/Tests/Editor/LayeredBattlefieldSceneTests.cs"
+      ]
+    }
+  ],
+  "notes": [
+    "Source-only first publication; downloadable Players/checkpoints/datasets are not included.",
+    "All copied assets retain original GUID metadata. Internal README report links point to docs/STATUS.md."
+  ]
+}

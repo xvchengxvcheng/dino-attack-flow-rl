@@ -1,0 +1,7 @@
+{
+  "name": "DinoAttack.Companion.Core.Tests",
+  "references": ["DinoAttack.Companion.Core"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": false
+}

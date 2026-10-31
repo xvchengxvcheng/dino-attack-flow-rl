@@ -248,6 +248,8 @@ namespace LlamAcademy.Dinos.Map.Editor
 
         private static void ConfigureLightingAndAtmosphere(Scene scene)
         {
+            // A visual repair must preserve the explicitly authored night theme.
+            if (HasStarNightSky()) return;
             Light[] directional = scene.GetRootGameObjects()
                 .SelectMany(root => root.GetComponentsInChildren<Light>(true))
                 .Where(light => light.type == LightType.Directional).ToArray();
@@ -305,6 +307,7 @@ namespace LlamAcademy.Dinos.Map.Editor
 
         private static void ConfigureVolumeProfile()
         {
+            if (HasStarNightSky()) return;
             ScriptableObject profile = AssetDatabase.LoadAssetAtPath<ScriptableObject>(VolumeProfilePath);
             if (profile == null) throw new InvalidOperationException("DefaultVolumeProfile.asset is missing.");
             ConfigureVolumeComponent(profile, "Tonemapping", true, ("mode", 1));
@@ -607,6 +610,15 @@ namespace LlamAcademy.Dinos.Map.Editor
         {
             Light[] directional = scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<Light>(true))
                 .Where(light => light.type == LightType.Directional).ToArray();
+            if (HasStarNightSky())
+            {
+                return directional.Length == 1 && RenderSettings.sun == directional[0] &&
+                    Approximately(directional[0].intensity, 1.25f) && directional[0].shadows == LightShadows.Soft &&
+                    RenderSettings.ambientMode == AmbientMode.Trilight && RenderSettings.fog &&
+                    Approximately(RenderSettings.ambientSkyColor, new Color(0.53f, 0.61f, 0.78f)) &&
+                    Approximately(RenderSettings.ambientEquatorColor, new Color(0.39f, 0.46f, 0.60f)) &&
+                    Approximately(RenderSettings.ambientGroundColor, new Color(0.24f, 0.29f, 0.40f));
+            }
             return directional.Length == 1 && RenderSettings.sun == directional[0] &&
                 Approximately(directional[0].transform.eulerAngles, Quaternion.Euler(42f, -28f, 0f).eulerAngles) &&
                 Approximately(directional[0].intensity, 1.25f) && directional[0].shadows == LightShadows.Soft &&
@@ -622,6 +634,14 @@ namespace LlamAcademy.Dinos.Map.Editor
 
         private static bool VolumeIsCanonical()
         {
+            if (HasStarNightSky())
+            {
+                ScriptableObject night = AssetDatabase.LoadAssetAtPath<ScriptableObject>(
+                    "Assets/LlamAcademy/Dinos/Environment/StarNight/Star Night Grading.asset");
+                return VolumeValueMatches(night, "WhiteBalance", "temperature", -8f) &&
+                    VolumeValueMatches(night, "ColorAdjustments", "contrast", 5f) &&
+                    VolumeValueMatches(night, "Bloom", "intensity", 0.12f);
+            }
             ScriptableObject profile = AssetDatabase.LoadAssetAtPath<ScriptableObject>(VolumeProfilePath);
             return VolumeValueMatches(profile, "Tonemapping", "mode", 1) &&
                    VolumeValueMatches(profile, "WhiteBalance", "temperature", 12f) &&
@@ -629,6 +649,9 @@ namespace LlamAcademy.Dinos.Map.Editor
                    VolumeValueMatches(profile, "Bloom", "intensity", 0.22f) &&
                    VolumeValueMatches(profile, "Vignette", "intensity", 0.08f);
         }
+
+        private static bool HasStarNightSky() => RenderSettings.skybox != null &&
+            RenderSettings.skybox.shader != null && RenderSettings.skybox.shader.name == "DinoAttack/Skybox/StarNight";
 
         private static bool VolumeValueMatches(ScriptableObject profile, string componentName, string propertyName,
             float expected)

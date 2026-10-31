@@ -14,6 +14,8 @@ import numpy as np
 import torch
 import yaml
 
+from flow_rl.training.validation import validate_finite_parameters
+
 from flow_rl.data.normalization import IdentityObservationNormalizer
 from flow_rl.envs.dino_protocol import DinoProtocol
 from flow_rl.models.state_encoder import StateEncoder
@@ -141,6 +143,22 @@ class DinoParallelPolicyFlowConfig:
         return _sha256(self.actor_initialization_checkpoint_path)
 
     def validate(self) -> None:
+        validate_finite_parameters(
+            gamma=self.gamma,
+            gae_lambda=self.gae_lambda,
+            actor_learning_rate=self.actor_learning_rate,
+            critic_learning_rate=self.critic_learning_rate,
+            clip_range=self.clip_range,
+            gaussian_entropy_coefficient=self.gaussian_entropy_coefficient,
+            brownian_coefficient=self.brownian_coefficient,
+            value_clip=self.value_clip,
+            max_gradient_norm=self.max_gradient_norm,
+            time_scale=self.time_scale,
+            poll_timeout=self.poll_timeout,
+            encoder_dropout=self.encoder_dropout,
+            inference_batch_wait_seconds=self.inference_batch_wait_seconds,
+            std_init=self.std_init,
+        )
         for path, label in (
             (self.build_path, "Unity build"),
             (self.protocol_path, "protocol"),

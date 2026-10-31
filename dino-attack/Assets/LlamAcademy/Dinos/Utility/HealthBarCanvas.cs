@@ -31,7 +31,11 @@ namespace LlamAcademy.Dinos.Utility
             {
                 IDamageable damageable = keyValuePair.Key;
                 HealthBarEntry entry = keyValuePair.Value;
-                if (damageable == null || entry.HealthBar == null || damageable.Transform == null)
+                // IDamageable is stored as an interface, so Unity's destroyed-object
+                // null check is otherwise bypassed and Transform can throw after a
+                // defense is removed during setup.
+                bool destroyedDamageable = damageable is Object unityObject && unityObject == null;
+                if (damageable == null || destroyedDamageable || entry.HealthBar == null || damageable.Transform == null)
                 {
                     stale ??= new List<IDamageable>();
                     stale.Add(damageable);

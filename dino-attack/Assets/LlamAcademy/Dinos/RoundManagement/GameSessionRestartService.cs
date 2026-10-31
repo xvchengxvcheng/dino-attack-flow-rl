@@ -61,6 +61,16 @@ namespace LlamAcademy.Dinos.RoundManagement
             IsRestartLaunch = false;
         }
 
+        private void Start()
+        {
+            if (GameMapId.TryFromSceneName(gameObject.scene.name, out GameMapId map) && map.IsPlayable &&
+                GetComponent<GameSpeedControl>() == null) gameObject.AddComponent<GameSpeedControl>();
+            if ((map == GameMapId.OpenTropicalBattlefield || map == GameMapId.LayeredBattlefield ||
+                 map == GameMapId.JevVillageDemo) && CurrentLaunchRequest.Controller != GameControllerMode.TrainingAI &&
+                GetComponent<LlamAcademy.Dinos.UI.BattlefieldExitUI>() == null)
+                gameObject.AddComponent<LlamAcademy.Dinos.UI.BattlefieldExitUI>();
+        }
+
         public bool TryScheduleReload(bool deriveNewStartSeed, float realTimeDelay = MinimumReloadDelay)
         {
             int nextSeed = deriveNewStartSeed

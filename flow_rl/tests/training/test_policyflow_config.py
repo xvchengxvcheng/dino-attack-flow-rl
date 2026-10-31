@@ -33,13 +33,13 @@ def _config() -> dict:
     }
 
 
-def test_yaml_loads_derived_official_nfe_and_normalizer_metadata(tmp_path: Path, flow_bc_fixture) -> None:
+def test_yaml_loads_derived_official_nfe_and_normalizer_metadata(tmp_path: Path) -> None:
     path = tmp_path / "config.yaml"
     values = _config()
-    build, checkpoint = flow_bc_fixture
-    values["normalizer_checkpoint_path"] = str(checkpoint)
-    values["actor_initialization_checkpoint_path"] = str(checkpoint)
-    values["build_path"] = str(build)
+    root = Path(__file__).resolve().parents[3]
+    values["normalizer_checkpoint_path"] = str(root / "reports/phase3/ppo-seed-0/checkpoints/final.pt")
+    values["actor_initialization_checkpoint_path"] = str(root / "reports/phase6/flow-bc-seed-0/checkpoints/final.pt")
+    values["build_path"] = str(root / "Builds/3DBall/3DBall.exe")
     values["run_directory"] = str(tmp_path / "run")
     path.write_text(yaml.safe_dump(values), encoding="utf-8")
     config = PolicyFlowTrainingConfig.from_yaml(path)

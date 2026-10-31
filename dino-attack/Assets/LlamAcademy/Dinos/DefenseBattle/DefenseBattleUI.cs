@@ -211,7 +211,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             StatusLabel.style.left = 18;
             StatusLabel.style.bottom = 196;
             StatusLabel.style.color = new Color(1f, 0.45f, 0.35f);
-            StatusLabel.style.backgroundColor = new Color(0.08f, 0.04f, 0.02f, 0.92f);
+            StatusLabel.style.backgroundColor = new Color(0.055f, 0.09f, 0.15f, 0.94f);
             StatusLabel.style.paddingLeft = 12;
             StatusLabel.style.paddingRight = 12;
             StatusLabel.style.paddingTop = 7;
@@ -285,7 +285,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
         {
             VisualElement element = new();
             element.pickingMode = PickingMode.Position;
-            element.style.backgroundColor = new Color(0.13f, 0.07f, 0.035f, 0.94f);
+            element.style.backgroundColor = new Color(0.055f, 0.09f, 0.15f, 0.96f);
             element.style.borderTopLeftRadius = 9;
             element.style.borderTopRightRadius = 9;
             element.style.borderBottomLeftRadius = 9;
@@ -294,10 +294,10 @@ namespace LlamAcademy.Dinos.DefenseBattle
             element.style.borderRightWidth = 1;
             element.style.borderBottomWidth = 1;
             element.style.borderLeftWidth = 1;
-            element.style.borderTopColor = new Color(0.88f, 0.55f, 0.18f, 0.85f);
-            element.style.borderRightColor = new Color(0.88f, 0.55f, 0.18f, 0.85f);
-            element.style.borderBottomColor = new Color(0.88f, 0.55f, 0.18f, 0.85f);
-            element.style.borderLeftColor = new Color(0.88f, 0.55f, 0.18f, 0.85f);
+            element.style.borderTopColor = new Color(0.47f, 0.60f, 0.74f, 0.8f);
+            element.style.borderRightColor = new Color(0.47f, 0.60f, 0.74f, 0.8f);
+            element.style.borderBottomColor = new Color(0.47f, 0.60f, 0.74f, 0.8f);
+            element.style.borderLeftColor = new Color(0.47f, 0.60f, 0.74f, 0.8f);
             return element;
         }
 
@@ -312,7 +312,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             overlay.style.bottom = 0;
             overlay.style.justifyContent = Justify.Center;
             overlay.style.alignItems = Align.Center;
-            overlay.style.backgroundColor = new Color(0.02f, 0.015f, 0.01f, 0.72f);
+            overlay.style.backgroundColor = new Color(0.025f, 0.04f, 0.075f, 0.82f);
             return overlay;
         }
 
@@ -332,7 +332,7 @@ namespace LlamAcademy.Dinos.DefenseBattle
             button.style.minWidth = 130;
             button.style.marginTop = 4;
             button.style.marginBottom = 4;
-            button.style.backgroundColor = new Color(0.38f, 0.16f, 0.055f, 1f);
+            button.style.backgroundColor = new Color(0.16f, 0.26f, 0.39f, 1f);
             button.style.color = Color.white;
             button.style.fontSize = 22;
             button.style.unityFontStyleAndWeight = FontStyle.Bold;

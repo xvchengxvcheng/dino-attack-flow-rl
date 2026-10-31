@@ -15,7 +15,8 @@ namespace LlamAcademy.Dinos.Tests.Editor
         private const string MapTwo = "Assets/LlamAcademy/Dinos/Scenes/LayeredBattlefield.unity";
         private const string MapThree = "Assets/LlamAcademy/Dinos/Scenes/DefenseBattlefield.unity";
         private const string MapSelect = "Assets/LlamAcademy/Dinos/Scenes/MapSelect.unity";
-        private const string FrozenMapTwoHash = "49857FB6EF1352F2973B699A5FA8613598D247E8D38BA39D7E124CD737E72560";
+        // Approved Star Night presentation baseline; defense installers must still preserve Map 2.
+        private const string FrozenMapTwoHash = "74DE3F69AC52585CA5E99F5D252C5EFC2F867CF8249C0EE4F3E4DAD9CEE8CDDA";
 
         [Test]
         public void DefenseScene_PreservesMapTwoAndStoresPlayerDefenseConfiguration()
