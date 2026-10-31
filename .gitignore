@@ -41,3 +41,11 @@
 /dino-attack/Assets/report/
 /dino-attack/Assets/ML-Agents/Timers/
 /docs/interview/
+
+# Explanatory scratch notes removed from public upload
+/flow动作序列.md
+/mlagents_通信.md
+/navmesh的update讲解.md
+/sensor组件.md
+/前沿开源游戏.md
+/网络参数正则项.md
