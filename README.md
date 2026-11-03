@@ -6,7 +6,7 @@
 
 这是一个基于 Unity 6 的反向塔防项目。玩家既可以部署恐龙突破防线，也可以布置守军并亲自上阵，挑战 AI 的进攻。项目基于原版 Dino Attack，通过独立的 Python / PyTorch 训练系统，将 **PPO、FPO、PolicyFlow** 三种已训练策略接入游戏的 AI Strategy 菜单。
 
-**直接体验：** [下载 Windows 游戏及训练附件（v0.1.0）](https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/tag/v0.1.0)。解压后运行 `Builds/DinoAttack-Windows-20260906/DinoAttack.exe`，保留同目录依赖。三种 AI 已内置，无需安装 Unity 或 Python。
+**直接体验：** [下载 Windows 游戏及训练附件（v0.2.0）](https://github.com/xvchengxvcheng/dino-attack-flow-rl/releases/tag/v0.2.0)。解压后运行 `解压后的 DinoAttack.exe`，保留同目录依赖。三种 AI 已内置，无需安装 Unity 或 Python。
 
 [Flow RL 简介](#flow-rl) · [四张地图](#maps) · [地图四：星光守卫 + JEV 伴侣](#map4) · [重点工程](#engineering) · [模型状态](#status) · [运行指南](#quickstart) · [源码导航](#resources)
 
@@ -25,7 +25,7 @@
 ### 当前策略的局限
 
 - **PPO**：能取得胜利，但尚未稳定学会通过攻击房屋获取额外食物以争取更高终局奖励，有陷入局部最优的迹象。
-- **FPO / PolicyFlow**：模型仍在调参阶段，部署时机和开局等待有待改善。这里的"探索阶段"指模型研究尚未收敛，并非游戏内随机探索动作。
+- **FPO / PolicyFlow**：模型仍在调参阶段，部署时机和开局等待有待改善。
 
 ---
 
@@ -93,7 +93,7 @@
 
 JEV 伴侣系统带有可选的本地 LLM 网关（`CompanionJevClient`，默认关闭）；网关离线时自动回退到本地意图解析，游戏流程不受影响。
 
-> 地图四已完成本地开发验证（EditMode 20/20、PlayMode 10/10）及 Windows 构建，待审核后合并发布。v0.1.0 下载包为此前三张地图版本。
+> 地图四已完成本地开发验证（EditMode 20/20、PlayMode 10/10）及 Windows 构建。v0.2.0 Release 已提供包含地图四伤害数字反馈的 Windows 包，v0.1.0 保留为此前三张地图的历史版本。
 
 ---
 
@@ -238,3 +238,7 @@ python -m pip install -r requirements.lock
 ## 基础项目与算法来源
 
 游戏基础来自 [LlamAcademy / Dino Attack](https://github.com/llamacademy/dino-attack)，沿用基础玩法、单位系统、行为图与导航。环境桥接使用 [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents)。Flow 算法参考自：[FPO](https://github.com/akanazawa/fpo)、[ReinFlow](https://github.com/ReinFlow/ReinFlow)、[PolicyFlow](https://github.com/PolicyFlow2026/PolicyFlow)。本仓库的贡献是 Unity 环境适配、工程实现、实验排错、游戏部署，以及地图四的角色战斗与 JEV 伴侣系统。
+
+
+
+
